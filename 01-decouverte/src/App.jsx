@@ -4,6 +4,7 @@
 import Premier from "./composant/Premier" ; // importer 
 import Deuxieme from "./composant/Deuxieme";
 import Loop from "./composant/Loop";
+import Exo1 from "./composant/Exo1";
 
 function App() { // nom de la fonction = nom fichier 
                  // PascalCase 
@@ -13,6 +14,7 @@ function App() { // nom de la fonction = nom fichier
                  // menuVraimentImportant camelCase 
   return (<div>
       bonjour
+      <Exo1 />
       <Loop />
       <Premier />
       <Deuxieme />

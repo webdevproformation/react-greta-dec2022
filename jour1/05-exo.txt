@@ -1,5 +1,5 @@
 créer le composant Exo1 
-ce composant contient une variable qui est un tableau 
+ce composant contient une variable qui est un tableau  qui contient 7 valeurs : 
 
 jourSemaine =  lundi mardi mercredi jeudi vendredi samedi dimanche 
 
