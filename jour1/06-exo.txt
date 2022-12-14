@@ -6,6 +6,7 @@ contient une variable etudiants qui est une collection ( tableau d'objets )
     {id : 2 , nom : "Benoit" , isAdmin : false},
     {id : 3 , nom : "Céline" , isAdmin : true}
 ]
+
 dans la partie vue afficher le template suivant :
 <ul>
     <li> Alain est admin</li>
