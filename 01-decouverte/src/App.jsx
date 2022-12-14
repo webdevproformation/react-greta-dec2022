@@ -2,6 +2,7 @@
 // .jsx est conseillé car Visual Studio Code va réaliser une meilleure auto complétion (meilleure proposition)
 
 import Premier from "./composant/Premier" ; // importer 
+import Deuxieme from "./composant/Deuxieme";
 
 function App() { // nom de la fonction = nom fichier 
                  // PascalCase 
@@ -12,6 +13,7 @@ function App() { // nom de la fonction = nom fichier
   return (<div>
       bonjour
       <Premier />
+      <Deuxieme />
     </div>)
   // minimum absolue d'une composant est retourner 
   // jsx 
