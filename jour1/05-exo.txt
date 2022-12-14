@@ -1,0 +1,18 @@
+créer le composant Exo1 
+ce composant contient une variable qui est un tableau 
+
+jourSemaine =  lundi mardi mercredi jeudi vendredi samedi dimanche 
+
+dans la partie return afficher le jsx suivant 
+
+<ul>
+    <li>lundi</li>
+    <li>mardi</li>
+    <li>mercredi</li>
+    <li>jeudi</li>
+    ....
+    <li>dimanche</li>
+</ul>
+en utilisant les boucles 
+
+exécuter votre composant dans le composant racine App 
