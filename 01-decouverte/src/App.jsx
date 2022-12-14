@@ -3,6 +3,7 @@
 
 import Premier from "./composant/Premier" ; // importer 
 import Deuxieme from "./composant/Deuxieme";
+import Loop from "./composant/Loop";
 
 function App() { // nom de la fonction = nom fichier 
                  // PascalCase 
@@ -12,6 +13,7 @@ function App() { // nom de la fonction = nom fichier
                  // menuVraimentImportant camelCase 
   return (<div>
       bonjour
+      <Loop />
       <Premier />
       <Deuxieme />
     </div>)
