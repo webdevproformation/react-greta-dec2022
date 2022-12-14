@@ -1,0 +1,44 @@
+React ?????? 
+
+React / ReactJS / React.js => la même chose 
+
+=> librairie 
+=> framework 
+(très grosse librairie / 
+frame cadre - work travail => méthode de travail )
+
+=> librairie => plein de fonctionnalité 
+=> certaines fonctionnalités seront à ajouter
+=> de nombreuses manières de faire 
+
+=> react est une librairie 
+
+=> librairie qui permet de gérer la partie front d'une application 
+=> react permet de créer UI : User Interface 
+diaporama / barre de menu / panier / 
+éléments qui vont être manipulé par des utilisateurs via un Navigateur (Firefox / Chrome / Edge)
+
+=> avec React il n'y a pas la partie back (base de données)
+=> React va appeler des services / API 
+Application Program Interface 
+
+=> créer par Facebook en 2011 ET ils l'ont rendu open source 
+
+dans un projet html, élément de base c'est la balise :
+
+=> <h1>Bonjour</h1> 
+<p>coucou </p>
+
+dans un projet React, élément de base c'est "Composant" 
+
+function Navbar(){
+    return <nav>menu</nav>
+}
+// fonction javascript qui retourne du jsx 
+
+
+=> créer un fichier accueil.html (projet html)
+=> créer des fichiers .jsx ou .js 
+
+=> utiliser la version Javascript de la librairie React 
+
