@@ -1,0 +1,17 @@
+créer le composant Exo2
+contient une variable etudiants qui est une collection ( tableau d'objets )
+
+[
+    {id : 1 , nom : "Alain" , isAdmin : true},
+    {id : 2 , nom : "Benoit" , isAdmin : false},
+    {id : 3 , nom : "Céline" , isAdmin : true}
+]
+dans la partie vue afficher le template suivant :
+<ul>
+    <li> Alain est admin</li>
+    <li> Benoit est utilisateur non connu</li>
+    <li> Céline est admin</li>
+</ul>
+utiliser les boucles et les conditions pour réaliser ce template
+
+executer ce template dans App

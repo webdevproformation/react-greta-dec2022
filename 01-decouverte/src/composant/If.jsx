@@ -9,7 +9,7 @@ const If = () => {
     const show = false ;
     const tableau = [1,2,3] ; 
     // si la valeur de show est true => <p>bonjour</p>
-    // si c'est fait affiche quelquechose 
+    // si c'est vrai affiche quelquechose 
     // si la tableau est vide => <p>le tableau est vide</p> sinon <p>le tableau contient 2 élèments</p>
     // si vrai action 1 sinon action 2 
     return ( <>
