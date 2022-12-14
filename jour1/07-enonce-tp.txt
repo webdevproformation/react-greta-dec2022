@@ -1,0 +1,12 @@
+pour demain 
+=> réaliser le 1er tp proposé dans le chapitre TP du support 
+
+https://formation.webdevpro.net/react/99-tp.html
+=> Calculateur de dépenses
+
+=> réalisez ce projet en javascript 
+=> réaliser en React si vous voulez 
+
+=> pas de note 
+=> livraison (github / zip du dossier qui contient le projet et envoyé par email )
+=> WeTransfer / Google Drive ...  
