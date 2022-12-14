@@ -1,0 +1,16 @@
+Bonjour 
+Malik HARRIZ
+malik.h@webdevpro.net 
+
+=> React 
+
+=> support de cours sur internet (accéder pendant le cours / après cours )
+
+https://formation.webdevpro.net/react 
+login : react 
+password : fb 
+
+=> si le mot de passe change => email 
+
+notes de cours sont partagés sur un github = 
+https://github.com/webdevproformation/react-greta-dec2022
