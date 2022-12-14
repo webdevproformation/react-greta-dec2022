@@ -1,0 +1,76 @@
+pour pouvoir créer un projet react 
+il faut OBLIGATOIREMENT avoir installé 
+
+Nodejs => logiciel (.exe)
+télécharger et l'installer sur l'ordinateur 
+=> https://nodejs.org/fr/
+
+
+=> sudo apt --fix-broken install 
+=> sudo  apt install nodejs
+=> node -v
+=> sudo  apt install npm
+npm -v  
+
+?? => pour n'importe quelle version de node => 12 / 18 / 19 
+
+Nodejs => "run time" 
+permet d'exécuter du javascript HORS de votre navigateur web 
+
+NPM => Node Package Manager => logiciel installé en même temps que Nodejs 
+
+logiciel qui permet de télécharger et installer des librairies (package javascript)
+
+
+---------------------
+
+?? créer notre premier projet react 
+
+// méthode 1 : 
+=> npm -g -i create-react-app 
+=> create-react-app nom_projet 
+
+function Calcul(){
+    const a = 2 ; // variable local 
+}
+
+const a = 20 ; // variable globale 
+function Calcul(){
+   
+}
+
+npm -i => librairie n'est disponible que dans le projet en cours 
+npm -i -g => librairie est globale sur ton projet mais aussi sur les autre  
+
+=> méthode 2 
+npx create-react-app nom_projet 
+
+=> méthode 3 
+npm create vite 
+
+=> il existe une version 4 installation
+=> télécharger vous même react et ses dépendances 
+=> modifier des fichiers de configuration 
+
+---------------
+
+où j'installe ce projet dans mon ordinateur 
+
+=> PATH => il faut créer le projet dans un dossier spécifique dans votre ordinateur 
+
+etape 1 => se mettre dans le PATH
+etape 2 => npm create vite 
+etape 3 => 01-decouverte
+etape 3 => React
+etape 3 => Javascript
+etape 6 => cd 01-decouverte
+etape 6 => npm install
+etape 8 => npm run dev # en + de react + environnement de dev 
+                                         serveur de développement
+                                        lancer le serveur de développement 
+VITE v3.2.5  ready in 383 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+
+  
