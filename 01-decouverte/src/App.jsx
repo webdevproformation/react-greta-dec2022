@@ -1,34 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+// fichier extension .js ou .jsx 
+// .jsx est conseillé car Visual Studio Code va réaliser une meilleure auto complétion (meilleure proposition)
 
-function App() {
-  const [count, setCount] = useState(0)
+import Premier from "./composant/Premier" ; // importer 
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+function App() { // nom de la fonction = nom fichier 
+                 // PascalCase 
+                 // Premier 
+                 // MenuNavigation 
+                 // Menu_Navigation Kebab_Case Sneak_Case
+                 // menuVraimentImportant camelCase 
+  return (<div>
+      bonjour
+      <Premier />
+    </div>)
+  // minimum absolue d'une composant est retourner 
+  // jsx 
+  // ressemble beaucoup à du html 
+  // ressemble beaucoup à une string 
+  // mélange entre javascript / html / xml 
 }
 
 export default App
+
+// à partir de 2015 => en javascript il a été décidé d'ajouter
+// de nombreux mots clé dans le langage 
+// const let 
+// import 
+// export 
+// par défaut la fonction (Composant) App est local au fichier 
+// je ne peux pas l'utiliser dans un autre fichier 
+// si je veux l'utiliser dans un autre fichier (par exemple dans le fichier main.js )
+// sauf si j'ajoute la ligne "export default App"
+

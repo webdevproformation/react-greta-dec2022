@@ -1,0 +1,55 @@
+01-decouverte => nom du projet 
+
+node_modules/ => dossier technique 
+             contient l'ensemble des librairies
+             qui permettent de faire fonctionner React 
+             on ne le touche pas manuellement 
+             MAIS on va modifier le fichiers via la commande npm 
+public/
+      vous allez trouver les fichiers publics 
+      index.html (create-react-app)
+      fichier images / pdf / word / excel 
+      css / favicon       
+      dans ce dossier stocker les fichiers images => logo 
+src/ 
+    source => DANS dossier que l'on va passer 99% de notre temps 
+    créer de fichiers .jsx 
+
+    main.jsx
+
+    // importer des fonctionnalités qui sont stockées
+    // à deux endroits 
+
+    import React from 'react'
+    import ReactDOM from 'react-dom/client' // node_modules 
+
+    import App from './App'
+    import './index.css' // ./ dans le dossier en cours 
+
+    // utiliser les fonctionnalités téléchargées
+    // exécuter 
+    const ReactDOM = {
+        createRoot : function(){ }
+    }
+    ReactDOM.createRoot( sélectionne une balise qui a l'id #root et injecte mon code react dedans  )
+    document.getElementById('root').innerHTML // DOM
+
+    ReactDOM.createRoot(document.getElementById('root')).render( // Shadow DOM le DOM l'ombre  
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+    )
+
+    
+
+    index.html  vite => <div id="root"></div> + <script>
+    index.html  create-react-app => <div id="root"></div> 
+
+    vite => bundler 
+    webpack => bundler 
+
+    prendre plein de fichiers => rassembler en 1 seul  (bundle)
+
+    src/App.jsx 
+
+
