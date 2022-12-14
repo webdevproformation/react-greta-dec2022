@@ -1,0 +1,36 @@
+créer dans le projet 01-decouverte
+un nouveau composant qui s'appelle Deuxieme 
+
+ce composant retourne le jsx suivant 
+
+<ul>
+    <li>je sais</li>
+    <li>créer</li>
+    <li>un composant</li>
+</ul>
+
+une fois créé => exécuter le composant Deuxieme dans le composant racine App 
+
+installer node version 18 
+https://www.golinuxcloud.com/install-nodejs-ubuntu-from-tar-xz/
+
+wget lien url 
+tar xvfJ nom_fichier.tar
+sudo cp -r node-v18.12.1-linux-x64/{bin,include,lib,share}  /usr/
+find /usr -name node
+node -v 
+
+sudo apt install nodejs 
+
+sudo su - => root (greta)
+npm i -g create-react-app 
+
+dans le dossier du projet 
+create-react-app 01-decouverte 
+exit 
+chown -R greta:greta 01-decouverte 
+Visual Studio Code 
+
+https://prod.liveshare.vsengsaas.visualstudio.com/join?2CC1C8D04444F55A7D37FA969D81ADE31B39
+
+
