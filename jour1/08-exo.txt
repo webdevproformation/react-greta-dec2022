@@ -1,0 +1,8 @@
+créer le composant Exo3
+ce composant contient une image 
+et contient un bouton 
+
+si je clique sur le bouton afficher dans la console du navigateur "j'ai cliqué"
+
+si je survole l'image afficher dans la console "j'ai survolé l'image"
+
