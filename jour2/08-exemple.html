@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arbre = {
+            nom : "chêne",
+            age : 200 ,
+            unite : "ans"
+        }
+
+        const arbreModifie = {
+            nom : "chêne",
+            age : 200 ,
+            unite : "ans", // disparu 
+            unite : "mètre" // propriété unite précédente qui a le même nom l'a écrasé
+        }
+
+        console.log(arbreModifie); // ???
+
+        const arbreModifie2 = { ...arbre , unite : "cm"}// propriété unite précédente a été écrasé par unite : "cm"
+
+        console.log(arbreModifie2); // 
+
+    </script>
+</body>
+</html>
