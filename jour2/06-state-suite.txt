@@ -1,0 +1,33 @@
+Dans useState() vous pouvez stocker des primitives
+
+
+const [p1, setP1] = useState("du texte") ; // string => primitive 
+const [p2, setP2] = useState(1.2) ; // Number => primitive 
+const [p3, setP3] = useState(true) ; // Boolean => primitive 
+const [p4, setP4] = useState(false) ; // Boolean => primitive 
+
+et que je veux modifier sa valeur 
+
+setP1("autre texte")
+setP2(10)
+setP3( !p3 ) ; 
+setP3( !true ) ; 
+setP3( false ) ; // p3 => false 
+
+// il existe deux manières d'utiliser setP1 
+setP1("autre texte") // directement la valeur 
+setP1( () => { return "autre valeur" } ) // une fonction fléchée
+
+setP1( () => { 
+    if(a === 2){
+        return "autre valeur" 
+    }else {
+        return "encore une autre valeur"
+    }    
+} )
+
+setP1( () => { 
+    return (a === 2) ? "autre valeur" : "encore une autre valeur"
+} )
+
+
