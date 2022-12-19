@@ -37,6 +37,51 @@ export default Menu ;
 // car par défaut le composant est local au fichier sauf avec un export default => dans ce cas on peut l'utiliser dans un fichier 
 
 
+--------------------
+
+import Menu from "./path/...jsx" ; // le fichier est relatif au fichier en cours 
+
+function App(){ // App => composant racine parent de tous les composants 
+
+    return <> {/* commentaire en jsx */}
+        {/* Menu() exécuter une fonction */}
+        <Menu /> {/* exécuter le composant */}
+    </> {/* balise fermante du fragment  */}
+}
 
 
+// pour créer des composants, il faut créer un projet React 
+
+// MAIS pour créer un projet React il faut au préalable avoir installé NodeJS sur l'ordinateur 
+// https://nodejs.org/en/ => version 18.12 
+// vérifier que nodejs est installé sur l'ordinateur
+// lancer un terminal et saisir la commande node -v
+
+// utiliser un script qui permet de créer un projet react et le paramétrer intégralement 
+
+// méthode 1
+// npm i -g create-react-app 
+// create-react-app nom_projet
+
+// méthode 2
+// npx create-react-app nom_projet
+
+// méthode 3 
+npm create vite 
+=> propose d'installer toutes les librairies js react / vue / svelte ...
+
+// npm Node Package Manager => installé en même temps que node 
+// npm create vite
+// 02-jour2
+// React 
+// javascript
+
+cd 02-jour2
+npm install => créer un nouveau dossier dans le dossier 02-jour2 
+               node_modules / contenant une grande quantité de fichiers 
+               DEPENDANCES de notre projet React 
+npm run dev => lancer un environnement de développement 
+            => créer un serveur local accessible via http://localhost:5174/ 
+            => Module Hot Reload MHR => si vous modifiez votre code source
+            => relancer le serveur + mettre à jour le navigateur 
 
