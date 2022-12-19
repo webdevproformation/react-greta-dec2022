@@ -5,6 +5,7 @@ import './App.css' */
 import Exo1 from "./composants/Exo1"
 import Exo2 from "./composants/Exo2"
 import Menu from "./composants/Menu"    
+import Texte from "./composants/Texte"    
 
 
 function App() {
@@ -24,6 +25,10 @@ function App() {
           <div className="col-4">
             <h2>Exo 2</h2>
             <Exo2 />
+          </div>
+          <div className="col-4">
+            <h2>présentation de useState</h2>
+            <Texte />
           </div>
         </section>
       </div>

@@ -1,0 +1,27 @@
+state => état 
+
+données / des informations qui sont propres au composant 
+ce sont des informations qui ont un sens POUR et UNIQUEMENT un composant concerné 
+
+// lorsque l'on créer des composants fonctionnels 
+
+const A = () = {
+
+    const data = [....]
+
+    return ....
+}
+
+// si on modifie le state c'est informations locales 
+// le composant doit être re rendu / re return 
+
+import { useState } from "react"; // import une fonctionnalité profonde de React 
+
+const A = () = {
+
+    const [data , setData] = useState([....]) ; // exécute une fonction qui a comme paramètre la valeur 
+
+    return ....
+}
+
+et là ?? je vais restart 

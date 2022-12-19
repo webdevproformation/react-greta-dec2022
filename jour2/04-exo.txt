@@ -24,3 +24,13 @@ return
 bouton qui contient le texte bonjour
 
 si vous cliquez sur le bouton => remplir la console du navigateur avec le texte "coucou" 
+
+1 état local du composant 
+// useState()
+
+2 
+// props => comment envoyer des informations d'une composant vers un autre composant 
+
+3 les deux en même temps !! 
+
+rdv 10h45 bon café !!! 
