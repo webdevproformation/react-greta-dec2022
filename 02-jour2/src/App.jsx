@@ -2,6 +2,7 @@
 import reactLogo from './assets/react.svg'
 import './App.css' */
 // remise à plat 
+import Etudiant from "./composants/Etudiant"
 import Exo1 from "./composants/Exo1"
 import Exo2 from "./composants/Exo2"
 import Exo3 from "./composants/Exo3"
@@ -38,6 +39,10 @@ function App() {
           <div className="col-4">
             <h2>Exo4</h2>
             <Exo4 />
+          </div>
+          <div className="col-4">
+            <h2>Exo4</h2>
+            <Etudiant />
           </div>
         </section>
       </div>
