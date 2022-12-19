@@ -25,3 +25,14 @@ const A = () = {
 }
 
 et là ?? je vais restart 
+
+-----------------
+
+// créer le composant Exo3 
+// image et p 
+
+utiliser useState pour stocker la variable local (state) 
+p qui contient par défaut la valeur ''
+
+si vous survolez l'image remplacer le "" => je survole l'image
+si vous sortez de  l'image remplacer le "" => je sors de l'image 
