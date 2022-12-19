@@ -57,10 +57,18 @@ si vous cliquez sur le bouton - => diminuer le state de -1
 si vous cliquez sur le bouton + => augmenter le state de +1
 
 
+const a = 2 ;
+const b = "Alain"
+const c = false ; 
 
 
+const etudiant = { // groupé dans un objet => très pratique  
+    age : 2,
+    nom : "alain",
+    isAdmin : false 
+}
 
-
+// mais pour les utiliser ça demande un peu plus de manipulation dans ton code 
 
 
 
