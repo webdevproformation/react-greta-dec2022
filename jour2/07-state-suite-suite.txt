@@ -8,3 +8,37 @@ const [p1 , setP1] = useState(["Alain" , "Céline"]); // je lui met un tableau
 const [p2, setP2] = useState({ nom : "Benoit" , age : 20 }) // je lui met un objet 
 
 // rdv 13h35 bon appétit !!!!
+
+useState() fonction qui vient de react 
+hook => crochet => fonction qui permet d'accéder à des fonctionnalités (bas niveau) de React 
+
+const [texte , setTexte] = useState("toto")
+
+=> setTexte() => setter permet de modifier la valeur de texte ET 
+=> rééxecuter le composant => rerender 
+
+const [obj , setObj] = useState({id : 1 , largeur : 20 , hauteur : 20, profondeur : 40 , nom : "retangle"})
+
+setObj(++obj.largeur)
+setObj({id : 1 , largeur : ++obj.largeur, hauteur : 20, profondeur : 40 , nom : "retangle"})
+setObj({ ...obj , largeur : ++obj.largeur })
+// spread operator => operateur apparu à partir de la version 6 de Javascript (2015)
+
+
+// créer le composant Exo5 
+import le hook useState 
+
+dans ce composant créer un state qui va contenir l'objet suivant 
+
+{ id : 1 , nom : "residence principale" , nb_piece : 4 , prix : 100000 }
+
+afficher dans la vue 
+le nombre de pièce
+le prix 
+
+ajouter deux boutons 
+bouton augmenter le nombre de pièce 
+bouton augmenter le prix 
+si vous cliquez sur le premier bouton augmenter le nombre de pièce de + 2
+si vous cliquez sur le deuxième bouton augmenter le prix  de pièce de + 40000
+
