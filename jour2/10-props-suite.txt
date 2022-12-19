@@ -38,4 +38,29 @@ const Enfant = (props) => {
 }
 
 
+Créer un composant Compteurs 
+import useState 
+stoker le state la valeur 0 
+
+appeler un composant Enfant Compteur (sans s)
+
+envoyer la valeur 0 et deux méthodes 
+méthode augmenter de +1 le chiffre 0 (le state)
+méthode diminuer de -1 le chiffre 0 (le state)
+
+Créer le composant Compteur 
+
+récupérer les 3 props 
+afficher <button>-</button> <span>0</span>  <button>+</button>
+
+si vous cliquez sur le bouton - => diminuer le state de -1
+si vous cliquez sur le bouton + => augmenter le state de +1
+
+
+
+
+
+
+
+
 
