@@ -1,0 +1,18 @@
+créer un nouveau composant dans le projet 02-jour2 
+
+il s'appelle Exo1 
+
+il contient une variable de type tableau 
+
+fleurs = [ jasmin , violette , rose , lys   ]
+
+le composant Exo1 doit afficher chaque fleur dans le jsx suivant 
+
+<ul>
+    <li>jasmin</li>
+    <li>violette</li>
+    <li>rose</li>
+    <li>lys</li>
+</ul>
+
+.map .... afficher le composant Exo1 sous le Menu  
