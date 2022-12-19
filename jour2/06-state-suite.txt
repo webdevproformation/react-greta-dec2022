@@ -29,5 +29,22 @@ setP1( () => {
 setP1( () => { 
     return (a === 2) ? "autre valeur" : "encore une autre valeur"
 } )
+// créer le composant Exo4 
+importer useState
+
+contient un tableau etudiants qui contient 2 noms ["Alain", "Céline"]
+créer un state formation initialiser à la valeur primitive ""
+
+dans le return <>
+    bouton
+    p contient le texte du state formation 
+
+si vous cliquez sur le bouton et que le nombre d'étudiant <= 2 modifier la valeur de formation pour qu'elle contient le texte "formation individuelle"
+si vous cliquez sur le bouton et que le nombre d'étudiant > 2 modifier la valeur de formation pour qu'elle contient le texte "formation collective"
+
+
+
+
+
 
 
