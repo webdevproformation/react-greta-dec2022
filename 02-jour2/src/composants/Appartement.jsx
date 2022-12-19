@@ -13,5 +13,4 @@ export default Appartement;
         <p> etage : {etage} - surface : {surface} </p>
     </section> );
 }
- 
 export default Appartement; */

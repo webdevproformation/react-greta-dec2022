@@ -43,3 +43,33 @@ props permettent d'envoyer des informations du Parent Vers l'enfant
 Immeuble 
 Appartement
 
+Cas pratique 
+
+Créer le composant 
+Formation (composant parent)
+import useState 
+
+ce composant dispose d'une state qui contient le tableau suivant 
+[
+    {id : 1 , nom : "JS" , duree : 3 , unite : "jours"},
+    {id : 2 , nom : "Node" , duree : 5 , unite : "jours"},
+    {id : 3 , nom : "React" , duree : 5 , unite : "semaines"},
+]
+
+ce composant Formation va appeler (exécuter un composant enfant Matiere)
+
+Matiere 
+récupérer les props envoyées par la parent  et afficher le jsx suivant 
+
+<p>
+    nom : nom - duree duree unite
+</p>
+
+
+
+
+
+
+
+
+
