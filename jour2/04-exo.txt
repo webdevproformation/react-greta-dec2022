@@ -16,3 +16,11 @@ le composant Exo1 doit afficher chaque fleur dans le jsx suivant
 </ul>
 
 .map .... afficher le composant Exo1 sous le Menu  
+
+
+// créer le composant Exo2 
+
+return 
+bouton qui contient le texte bonjour
+
+si vous cliquez sur le bouton => remplir la console du navigateur avec le texte "coucou" 
