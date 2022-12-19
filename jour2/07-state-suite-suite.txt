@@ -42,3 +42,4 @@ bouton augmenter le prix
 si vous cliquez sur le premier bouton augmenter le nombre de pièce de + 2
 si vous cliquez sur le deuxième bouton augmenter le prix  de pièce de + 40000
 
+https://prod.liveshare.vsengsaas.visualstudio.com/join?C4DAB9CA546B904C200510A8E077D9B8C5B0
