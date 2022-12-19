@@ -1,0 +1,42 @@
+Rappels 
+
+React est librairie Javascript qui permet de créer des UI User Interface => front dans une application web 
+
+créer en 2011 par des ingénieurs de Facebook 
+
+très populaire car bien documentée / très puissante / très appréciée 
+
+html => vous utilisez des balises html 
+<h1>
+<p>
+<li> ...
+
+React => vous utilisez des Composants 
+
+// manière 1
+function Menu () { // fonction javascript
+    return <nav></nav> // retourne au minimum du jsx 
+}
+
+// manière 2  
+const Menu = () => { // fonction fléchée
+    return <nav></nav> // retourne au minimum du jsx 
+}
+
+
+=> créer dans un fichier .jsx (permet à Visual Studio Code proposée une meilleure auto complétion)
+
+.jsx 
+
+const Menu = () => { // fonction fléchée
+    return <nav></nav> // retourne au minimum du jsx 
+}
+
+export default Menu ; 
+// permet d'utiliser notre composant dans un autre fichier 
+// car par défaut le composant est local au fichier sauf avec un export default => dans ce cas on peut l'utiliser dans un fichier 
+
+
+
+
+
