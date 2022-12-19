@@ -1,0 +1,45 @@
+nous venons de voir les bases pour créer des composants 
+
+jsx 
+evenement
+boucle 
+condition 
+useState 
+
+Comment faire communiquer des composants les uns avec les autres ?? 
+
+- props 
+
+- useContext / createContext 
+
+- Redux (State Manager)
+
+App     => Composant racine / root component 
+        => la Parent racine de tous les autres composants de votre application 
+    Exo1
+        Composant est un composant Enfant 
+    Exo2
+        Exo2 est le frère de Exo1 et le fils de App 
+    Exo3
+
+=> Node => arbre avec des noeuds 
+
+Quand on est les Composants ont une relation Parent <=> Enfant 
+il est possible de transmettre des informations (données) du Composant Parent vers le Composant Enfant 
+via le système de props 
+
+Attention les props ne fonctionnent pas entre frères et soeurs 
+
+UNIQUEMENT entre Père => Fille  et Fille <=> Père 
+
+=> extension qui intéressant à installer 
+
+https://reactjs.org/blog/2015/09/02/new-react-developer-tools.html#installation
+
+React Developer Tools
+
+props permettent d'envoyer des informations du Parent Vers l'enfant 
+
+Immeuble 
+Appartement
+

@@ -8,6 +8,7 @@ import Exo2 from "./composants/Exo2"
 import Exo3 from "./composants/Exo3"
 import Exo4 from "./composants/Exo4"
 import Exo5 from "./composants/Exo5"
+import Immeuble from "./composants/Immeuble"
 import Menu from "./composants/Menu"    
 import Texte from "./composants/Texte"    
 
@@ -48,6 +49,9 @@ function App() {
           <div className="col-4">
             <h2>Exo5</h2>
             <Exo5 />
+          </div>
+          <div className="col-4">
+            <Immeuble />
           </div>
         </section>
       </div>
