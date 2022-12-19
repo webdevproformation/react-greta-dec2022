@@ -1,0 +1,41 @@
+Parent
+
+const Formation = () => {
+    const variable = "toto"
+    return <Matiere info={variable}/>
+}
+
+Enfant 
+
+const Matiere = (props) => {
+    return <p>{ props.info }</p>
+}
+
+
+Envoie informations Parent => Enfant 
+
+Il est possible d'envoyer des informations de l'Enfant vers le Parent 
+
+------------------------
+
+const Parent = () => {
+
+    const methode = (param) => {
+
+    }
+
+    return <Enfant action={methode} /> envoi une fonction comme props à l'enfant 
+}
+
+const Enfant = (props) => {
+
+    const handleClick = () => {
+        props.action("valeur à envoyé au parent")
+    }
+
+    return <button onClick={handleClick}>action</button>
+
+}
+
+
+

@@ -8,6 +8,7 @@ import Exo2 from "./composants/Exo2"
 import Exo3 from "./composants/Exo3"
 import Exo4 from "./composants/Exo4"
 import Exo5 from "./composants/Exo5"
+import Fleurs from "./composants/Fleurs"
 import Formation from "./composants/Formation"
 import Immeuble from "./composants/Immeuble"
 import Menu from "./composants/Menu"    
@@ -56,6 +57,9 @@ function App() {
           </div>
           <div className="col-4">
             <Formation />
+          </div>
+          <div className="col-4">
+            <Fleurs />
           </div>
         </section>
       </div>
