@@ -2,7 +2,8 @@
 import reactLogo from './assets/react.svg'
 import './App.css' */
 // remise à plat 
-import Menu from "./composants/Menu"   
+import Exo1 from "./composants/Exo1"
+import Menu from "./composants/Menu"    
 
 
 function App() {
@@ -10,7 +11,17 @@ function App() {
   return (
     <>
       <Menu />
-      <h1>Coucou les amis !!</h1>
+      <div className="container">
+        <section className="row">
+          <div className="col-4">
+            <h1>Coucou les amis !!</h1>
+          </div>
+          <div className="col-4">
+            <h2>Exo 1</h2>
+            <Exo1 />
+          </div>
+        </section>
+      </div>
     </>
   )
 }
