@@ -7,3 +7,4 @@ const [p1 , setP1] = useState(["Alain" , "Céline"]); // je lui met un tableau
 
 const [p2, setP2] = useState({ nom : "Benoit" , age : 20 }) // je lui met un objet 
 
+// rdv 13h35 bon appétit !!!!

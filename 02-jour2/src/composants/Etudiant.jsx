@@ -20,7 +20,7 @@ const Etudiant = () => {
         //setEtudiant(etudiant.competences.push("react")) 
         // etudiant["js", "html" , "react"]
         etudiant.competences.push("react");
-        setEtudiant({...etudiant , competences: etudiant.competences}) 
+        setEtudiant({ ...etudiant , competences: etudiant.competences}) 
     }
 
     return (
