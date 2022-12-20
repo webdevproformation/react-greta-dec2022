@@ -1,0 +1,16 @@
+créer un nouveau composant Exo1 
+
+utiliser le hook useReducer 
+stocker un state like et qui a comme valeur par défaut 0 
+
+dans la fonction réductrice associée à useReducer vous allez gérer 5 cas 
+
+AUGMENTER => augmenter le nb de like de + 1
+APPRECIER  => augmenter le nb de like de + 5
+DIMINUER  => augmenter le nb de like de - 1
+DETESTE  => augmenter le nb de like de - 10
+par défaut => retourner le nombre de like 
+
+
+=> dans le composant Exo1 afficher 4 boutons pour tester les différents cas de figure de la fonction réductrice   
+

@@ -1,3 +1,4 @@
+// import { useState ,  useReducer } from "react"
 import { useReducer } from "react"
 
 function reducer(state , action){ // fonction que l'on peut stocker hors du composant (réutiliser)
