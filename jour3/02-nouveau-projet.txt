@@ -1,0 +1,54 @@
+récupérer l'ancien terminal
+stopper le serveur de dev 
+Ctrl + C 
+O 
+
+cd ..
+
+npm create vite
+03-jour3
+React 
+Javascript 
+
+  cd 03-jour3
+  npm install
+  npm run dev
+
+  http://localhost:5174/
+
+raccourci => lien 
+
+=> vider le fichier src/App.jsx 
+
+function App() {
+  return (<>bonjour</>)
+}
+
+export default App
+
+=> vider le nettoyer le fichier src/main.jsx
+
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+)
+
+Manière 1
+=> index.html => ajouter une balise <link> dans le <head>
+
+Manière 2
+=> aller télécharger la librairie bootstrap directement dans le dossier node_modules
+=> Dépendance de notre projet 
+=> stopper le serveur de dev 
+Ctrl + C 
+O
+npm i bootstrap
+
+main.jsx => import "bootstrap/dist/css/bootstrap.min.css";
+
+npm run dev

@@ -1,0 +1,40 @@
+
+Composant ==== une fonction 
+
+function Menu ( {titre , logo , auteur , action} ) {
+    return <p> {titre } 
+            <img src={logo} alt="" />
+            <span>{auteur}</span>
+            <button onClick={action}>action</button>
+            <button onClick={() => action("un peu de texte")}>action</button>
+    </p>
+}
+export default Menu ; 
+
+--------------------
+
+import Menu from "./Menu" ; // Enfant
+// data => Parent => Enfant
+// fonction => Parent => Enfant Mais la fonction est exécutée dans l'Enfant  information Enfant => Parent via le paramètre de la fonction 
+// App (Parent) et Menu (Enfant) s'affichent tous les deux 
+
+function App (){
+    const leTitre = "jour3";
+    const leLogo = "image.jpg";
+    const lAuteur = "Alain" ;
+    const grossir = function( texte ){ .... } 
+    // stocke une fonction dans une variable 
+    const grossir2 = ( texte ) => { .... } //****
+    return <Menu titre={leTitre} logo={leLogo} auteur={lAuteur} action={grossir2}  />
+}
+
+Menu("jour3" , "image.jpg" , "Alain")
+
+en javascript il est possible de stocker une fonction dans une variable
+
+
+Windows 
+
+App     / Menu 
+Dossier / Fichier 
+Parent / Enfant 

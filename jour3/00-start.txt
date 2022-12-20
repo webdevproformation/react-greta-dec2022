@@ -1,0 +1,15 @@
+support de cours 
+url  : https://formation.webdevpro.net/react/
+login : react
+password : fb 
+
+toutes les notes de cours sont partagées sur un github
+=> https://github.com/webdevproformation/react-greta-dec2022
+
+https://prod.liveshare.vsengsaas.visualstudio.com/join?C4DAB9CA546B904C200510A8E077D9B8C5B0
+
+=> rappel ??? des questions ??? 
+
+=> les props ? 
+
+
