@@ -23,3 +23,7 @@ Compteur
 <button> - </button> 3 <button> + </button>
 <button> - </button> -4 <button> + </button>
 Parent Enfant + boucle 
+
+stopper le serveur
+npm i lodash
+npm run dev

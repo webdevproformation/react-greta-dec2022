@@ -9,15 +9,24 @@ const Compteurs = () => {
     ])
 
     const diminuer = (id) => {
+        // compteurs = [{},{},{}]
+        // récupérer {} à modifier à diminuer 
+        // id = 1
+        //console.log(compteurs)
         const compteurAModifier = compteurs.find(function(item){
             return item.id === id
         })
-        const index = compteurs.indexOf(compteurAModifier)
+        // index la position dans le table compteurs de {} à modifier 
+        const index = compteurs.indexOf(compteurAModifier) 
+        // on modifie la propriété nb de {} qui a l'id 1 et qui est en position index
         compteurs[index].nb-- ;
+        // lancer la mise à jour du state via la fonction setCompteurs()
+        // attention il faut donner à cette fonction l'intégralité du tableau 
         setCompteurs([...compteurs])
     }
 
     const augmenter = (id) => {
+        
         const compteurAModifier = compteurs.find(function(item){
             return item.id === id
         })
