@@ -32,7 +32,7 @@ const Compteurs = () => {
         })
         const index = compteurs.indexOf(compteurAModifier)
         compteurs[index].nb++ ;
-        setCompteurs([...compteurs])
+        setCompteurs([...compteurs]) // clone est obligatoire 
     }
 
     return ( 

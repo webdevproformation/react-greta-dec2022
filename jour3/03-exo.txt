@@ -27,3 +27,21 @@ Parent Enfant + boucle
 stopper le serveur
 npm i lodash
 npm run dev
+
+----------------------
+
+let a = 2 ; // 
+    a += 3 ; // 5 => muter la valeur stockée dans la variable a 
+             // modifier la valeur stockée dans la valeur a 
+
+
+let b = ["Alain" , "Céline"] ;
+    b.push("Pierre") ; // ["Alain" , "Céline" , "Pierre"] // muter b 
+
+[state, setState] = useState(["Alain" , "Céline"])
+
+state.push("Pierre")
+
+setState(state)
+
+

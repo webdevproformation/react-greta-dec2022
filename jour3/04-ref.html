@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const a = [1, 2];
+
+        const b = a ; // ref mémoire de a dans b 
+
+        b.push(3) ;
+
+        console.log(a) // [1,2 , 3] ???????
+        console.log(b) // [1,2,3]
+
+        const c = ["a", "b"]
+        const d = [...c] ; // clone
+
+        d.push("c")
+        console.log(c) //["a", "b"]
+        console.log(d) //["a", "b", "c"] !!! ça fonctionne
+
+        // ------------
+
+        const e = [ {id : 1} , {id: 2} ]
+        const f = [...e] // // clone
+
+        f[0].id = 30
+
+        console.log(e) // [ {id : 30} , {id: 2} ]
+        console.log(f) // [ {id : 30} , {id: 2} ] // ça ne fonctionne pas 
+
+        const g = [ {id : 1} , {id: 2} ]
+        const h = _.cloneDeep(g) ;
+
+        h[0].id = 30
+        console.log(g) // [ {id : 1} , {id: 2} ]
+        console.log(h) // [ {id : 30} , {id: 2} ]
+
+        // -------
+
+        const etudiant = {nom :"Alain" , age : 12};
+        const cloneEtudiant = {...etudiant}
+        const cloneEtudiant2 = Object.assign({} , etudiant)
+
+
+        // https://fdu-blog.medium.com/js-cloner-un-objet-612bcc444fd6
+    </script>
+</body>
+</html>
