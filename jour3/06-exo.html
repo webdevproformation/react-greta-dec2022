@@ -15,7 +15,13 @@
         }
 
         console.log(prix.reduce(reducerTotal, 0))
-        
+
+        // solution en 1 instruction 
+        console.log([10, 20,30, 50].reduce(function(total, valeur){
+            return total += valeur;
+        } , 0))
+
+
         // solution 1
         console.log(prix.reduce(reducerTotal, 0) * 1.2)
 
