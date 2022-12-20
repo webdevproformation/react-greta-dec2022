@@ -1,1 +1,20 @@
 Cas pratique
+créer un composant Articles 
+contient un state avec articles qui contient la valeur suivante 
+
+[
+    {id : 1 , titre : "titre 1" , contenu : "lorem ipsum" , like : 1},
+    {id : 2 , titre : "titre 2" , contenu : "lorem ipsum" , like : 0},
+    {id : 3 , titre : "titre 3" , contenu : "lorem ipsum" , like : 10},
+    {id : 4 , titre : "titre 4" , contenu : "lorem ipsum" , like : 40},
+]
+exécuter un composant enfant Article 
+récupérer pour chaque élément du state de Articles les valeurs 
+et va les afficher
+<div>
+    <h2>titre 1</h2>
+    <p>lorem ipsum</p>
+    <button>augmenter </button> <span>1</span>
+</div>
+=> si je clique sur le bouton du 1er article => augmenter de + 1 le nombre de like du premier article
+=> si je clique sur le bouton du 2eme article => augmenter de + 1 le nombre de like du deuxieme article
