@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const prix = [10, 20,30, 50] ;
+
+        function reducerTotal (total, valeur){
+            return total += valeur;
+        }
+
+        console.log(prix.reduce(reducerTotal, 0))
+        
+        // solution 1
+        console.log(prix.reduce(reducerTotal, 0) * 1.2)
+
+        // solution 2
+        function reducerTotalTTC (total, valeur){
+            return total += valeur * 1.2;
+        }
+
+        console.log(prix.reduce(reducerTotalTTC, 0))
+
+    </script>
+</body>
+</html>
