@@ -1,6 +1,7 @@
 import Articles from "./composants/Articles"
 import Compteurs from "./composants/Compteurs"
 import Connexion from "./composants/Connexion"
+import Connexion2 from "./composants/Connexion2"
 import Contact from "./composants/Contact"
 import Exemple1 from "./composants/Exemple1"
 import Exemple2 from "./composants/Exemple2"
@@ -32,6 +33,9 @@ function App() {
         </div>
         <div className="col-3">
           <Connexion />
+        </div>
+        <div className="col-3">
+          <Connexion2 />
         </div>
       </section>
     </div>

@@ -1,0 +1,12 @@
+créer un composant qui s'appelle LastExo
+
+contient un formulaire qui contient 4 champs :
+
+1 input de type radio => sexe de la personne H / F 
+2 input de type texte => saisir son nom 
+3 menu déroulant select => sélectionner son pays de naissance (France / Allemagne / Belgique)
+4 input de checkbox (case à cocher) => plats préférés (la personne peut cocher plusieurs cases)
+
+burger / frite / blanquette de veau / pizza 
+
+lorsque l'on soumet le formulaire => récupérer les valeurs saisies / choisies / cochez par l'utilisateur (afficher dans la console les résultats)
