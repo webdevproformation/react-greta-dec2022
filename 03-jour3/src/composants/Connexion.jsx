@@ -7,6 +7,8 @@ const Connexion = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(loginRef.current.value , passwordRef.current.value)
+        loginRef.current.value = ""
+        passwordRef.current.value = ""
     }
 
     return ( 

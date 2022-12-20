@@ -5,6 +5,7 @@ const Connexion2 = () => {
         e.preventDefault();
         const formData = new FormData(e.target)
         console.log(Object.fromEntries(formData))
+        e.target.reset(); // vider le formulaire => reset 
         // jod => 
         // joi 
         // formik PropTypes
