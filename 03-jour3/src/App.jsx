@@ -1,6 +1,9 @@
+
+import Menu from "./composants/Menu"
+
 function App() {
   return (<>
-  bonjour
+    <Menu titre="jour3"/>
   </>)
 }
 

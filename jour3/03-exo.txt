@@ -1,0 +1,10 @@
+exo 1
+créer un nouveau composant Menu 
+
+<nav>
+    <span>jour3</span>
+</nav>
+
+essayer d'envoyer le texte jour3 du composant App => Menu 
+
+
