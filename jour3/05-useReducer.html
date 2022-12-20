@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // fonction reductrice
+
+        const a = [ 1,2,3 ] ; 
+        // faire la somme de tous les éléments dans mon tableau 
+        // 1 + 2 + 3 = 6 
+
+        // 1ère manière de faire la somme
+        let total = 0
+        for(let valeur of a){
+            total += valeur ;
+        }
+        console.log(total) // 6 
+        
+        // directement sur la variable a (qui est un tableau)
+        // deuxième manière de faire 
+        const somme = a.reduce(function(total, valeur){
+            return total += valeur
+        }, 0)
+        
+        console.log(somme);
+        
+        // le 1er paramètre de la méthode reduce(function(){}, 0)
+        // fonction REDUCTRICE => permet de transformer un tableau en 1 number
+
+        function reducer(total, valeur){
+            return total += valeur ;
+        }
+
+        const somme2 = a.reduce(reducer , 0) ; 
+
+        console.log(somme2);
+    </script>
+</body>
+</html>
+<!-- exo
+créer un fichier exo.html (hors du projet Raect en cours)
+créer une variable prix = [10, 20,30, 50] 
+en utilisant la méthode reduce des tableaux javascript somme de tous les prix 110
+en utilisant la méthode reduce des tableaux javascript somme TTC de tous les prix 110 * 1.2 
+-->
