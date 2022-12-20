@@ -1,5 +1,7 @@
 import Articles from "./composants/Articles"
 import Compteurs from "./composants/Compteurs"
+import Exemple1 from "./composants/Exemple1"
+import Exemple2 from "./composants/Exemple2"
 import Menu from "./composants/Menu"
 
 function App() {
@@ -12,6 +14,12 @@ function App() {
         </div>
         <div className="col-3">
           <Articles />
+        </div>
+        <div className="col-3">
+          <Exemple1 />
+        </div>
+        <div className="col-3">
+          <Exemple2 />
         </div>
       </section>
     </div>

@@ -10,11 +10,11 @@
     <script>
         const prix = [10, 20,30, 50] ;
 
-        function reducerTotal (total, valeur){
+        function reducerTotal (total, valeur ){
             return total += valeur;
         }
 
-        console.log(prix.reduce(reducerTotal, 0))
+        console.log(prix.reduce(reducerTotal, 0)) 
 
         // solution en 1 instruction 
         console.log([10, 20,30, 50].reduce(function(total, valeur){
