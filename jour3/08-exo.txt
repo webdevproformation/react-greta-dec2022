@@ -1,0 +1,13 @@
+créer un nouveau composant Connexion
+
+dans ce composant vous avez un formulaire avec deux champs 
+
+- login  => input de type text 
+- password  => input de type password 
+
+- bouton de soumission 
+
+lorsque vous soumettez le formulaire 
+veuillez récupérer les valeurs saisies dans les champs login et password 
+
+https://prod.liveshare.vsengsaas.visualstudio.com/join?B2DEE40560123964E6367EA26B90AAE36BF2

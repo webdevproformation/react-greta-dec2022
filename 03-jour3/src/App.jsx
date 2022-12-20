@@ -1,5 +1,6 @@
 import Articles from "./composants/Articles"
 import Compteurs from "./composants/Compteurs"
+import Contact from "./composants/Contact"
 import Exemple1 from "./composants/Exemple1"
 import Exemple2 from "./composants/Exemple2"
 import Exo1 from "./composants/Exo1"
@@ -24,6 +25,9 @@ function App() {
         </div>
         <div className="col-3">
           <Exo1 />
+        </div>
+        <div className="col-3">
+          <Contact />
         </div>
       </section>
     </div>
