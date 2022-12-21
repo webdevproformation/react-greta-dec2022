@@ -1,6 +1,7 @@
 import Menu from "./composants/Menu";
 import { Container , Row, Col } from "react-bootstrap"
 import Todo from "./composants/Todo";
+import Exo1 from "./composants/Exo1";
 
 const App = () => {
   return ( <>
@@ -9,6 +10,9 @@ const App = () => {
       <Row>
         <Col xs={4}>
           <Todo />
+        </Col>
+        <Col xs={4}>
+          <Exo1 />
         </Col>
       </Row>
     </Container>
