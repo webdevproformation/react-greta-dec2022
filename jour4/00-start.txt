@@ -1,0 +1,59 @@
+support de cours 
+url  : https://formation.webdevpro.net/react/
+login : react
+password : fb 
+
+toutes les notes de cours sont partagées sur un github
+=> https://github.com/webdevproformation/react-greta-dec2022
+
+
+useRef()
+
+=> formulaire concurrent 
+Object.fromEntries(new FormData())
+
+=> utiliser useRef() peut être utilisé d'autres chose que récupérer des valeurs 
+
+=> récupérer des éléments du DOM et les modifier avec du JS classique
+=> créer des variables qui n'entraine pas de rerender du Composant si ils sont modifiés 
+
+https://www.w3schools.com/react/react_useref.asp
+
+
+=> créer un nouveau projet 04-jour4 en utilisant vite / create-react-app 
+=> installer bootstrap 
+=> npm i react-bootstrap => https://react-bootstrap.github.io/
+=> créer un menu Jour4 
+
+=> POC => Proof Of Concept
+
+=> projet en javascript (React / VUE ...) => 
+=> robots d'indexation => par défaut les robots ne peuvent pas l'exécuter 
+=> javascript exécuté côté MAIS coté Serveur (comme du PHP )
+
+=> server-side rendering SSR 
+=> https://www.freecodecamp.org/news/server-side-rendering-your-react-app-in-three-simple-steps-7a82b95db82e/
+
+=> https://www.youtube.com/watch?v=FTPdeoLTHME
+
+nuxt next => je ne connais pas 
+
+humain le voit pas MAIS un robot d'indexation les voies
+=> display : none 
+=> hidden 
+
+humain ET robots ne les voient pas 
+=> document.querySelector("p").remove()
+=> if(){ 
+    jsx 
+}
+
+=> npm create vite
+
+  cd 04-jour4
+  npm install
+  npm install react-bootstrap bootstrap
+  npm run dev
+
+
+  => remise à plat 
