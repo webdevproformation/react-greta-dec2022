@@ -39,4 +39,9 @@ const [ produits , dispatch ] = useReducer(reducer , {login : "azerty" , passwor
 
 Composant => formulaire de connexion
 
+exo 1 :
+si vous double cliquez sur une tâche 
+=> vous allez la barré <del>....</del>
+=> vous allez la débarré <span>....</span>
 
+=> vous pouvez réaliser cet effet via la propriété status dans chaque tâche 
