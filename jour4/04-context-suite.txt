@@ -1,0 +1,27 @@
+// useState
+// useRef
+// useReducer
+// useContext / createContext 
+
+// Redux 
+// useMemo  
+// useEffect 
+
+
+=> mixer useContext / createContext  + useReducer
+
+=> deux Composants 
+
+Profil.jsx
+=> afficher le profil utiliser si il est connecté
+
+Connexion.jsx
+=> formulaire de connexion 
+
+=> Emballer ces deux composants avec <UserContextProvider>
+userContext.jsx 
+
+
+
+
+
