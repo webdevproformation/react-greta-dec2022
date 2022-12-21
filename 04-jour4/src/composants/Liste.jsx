@@ -1,5 +1,13 @@
+import { ListeContext } from "../contexts/listeContext" // store 
+import { useContext } from "react" // hook pour utiliser le store 
+
 const Liste = () => {
-    return ( <p>je suis une liste</p> );
+    const valeurs = useContext(ListeContext)
+    return ( <ul>
+        {valeurs.map(function(item, index){
+            return <li key={index}>{item}</li>
+        })}
+    </ul> );
 }
  
 export default Liste;
