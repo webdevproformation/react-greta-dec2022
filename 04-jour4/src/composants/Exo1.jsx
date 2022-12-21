@@ -5,19 +5,21 @@ import _ from "lodash"
 function reducer(state , action){
     const cloneState = _.cloneDeep(state);
     switch(action.type){
-        case "ADD_ARTICLE" :
+        case "ADD_ARTICLE" :     
             cloneState.push({
-                id : Math.random() + "",
-                titre : action.payload.titre,
-                contenu : action.payload.contenu,
+                id : Math.random() + "" , // clé primaire numéro unique pour chaque article
+                titre : action.payload.titre   ,
+                contenu : action.payload.contenu   ,
                 like : 0
             })
-            return cloneState;
-        case "PLUS_1_LIKE" : 
-            return cloneState.map( function(item){
-                if(item.id === action.payload) return {...item , like : item.like + 1}
-                return item
-            } )
+            return cloneState ;
+        case "PLUS_1_LIKE" :
+            // augmenter de +1 le nombre de like d'une l'article concerné 
+            // sinon retourner les autres articles 
+            return cloneState.map(function(item){
+                if(item.id === action.payload) return { ...item , like : item.like + 1} 
+                return item 
+            })
         default :
             return state ;
     } 
@@ -48,11 +50,12 @@ const Exo1 = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if(inputRef.current.value && textareRef.current.value){
-            const article = {titre : inputRef.current.value , contenu : textareRef.current.value}
-            console.log(article)
-            dispatch({type:"ADD_ARTICLE" , payload : article})
+            const article = {titre   : inputRef.current.value , contenu : textareRef.current.value}
+            // payload => les informations écrites dans le formulaire 
+            // ET que l'on va envoyer au state pour le modifier 
+            dispatch({type:"ADD_ARTICLE" , payload  : article  })        
             inputRef.current.value = "";
-            textareRef.current.value = ""
+            textareRef.current.value = "" 
             return ;
         }
         alert("veuillez remplir les deux champs");
@@ -69,14 +72,14 @@ const Exo1 = () => {
         </Form>
         <h2 className="my-4">Les articles</h2>
         { articles.length === 0 ?
-            <p>aucun article publié</p> :
+            <p>aucun article publié</p>   :
             <>
                 { articles.map(function(item){
                     return <Card key={item.id} className="mb-3">
                         <Card.Body>
                             <Card.Title>{item.titre}</Card.Title>
                             <Card.Text>{item.contenu}</Card.Text>
-                            <Badge variant="primary" onClick={() => dispatch({type:"PLUS_1_LIKE" , payload : item.id})}>{item.like}</Badge>
+                            <Badge variant="primary" onClick={() => dispatch({type: "PLUS_1_LIKE" , payload : item.id})}>{item.like}</Badge>
                         </Card.Body>
                     </Card>
                 }) }

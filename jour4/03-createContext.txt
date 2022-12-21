@@ -1,0 +1,30 @@
+useReducer 
+
+MAIS le formulaire et la liste des éléments sont stockés dans un seul composant 
+
+=> l'objectif de React c'est de découper le plus petit possible les éléments graphiques 
+formulaire
+Liste 
+
+=> deux composants qui sont des frères 
+MAIS une relation frère / Soeurs 
+
+Parent <=> Enfant partager des informations via le système de props 
+
+une première idée prendre les données et les méthodes 
+ de les stocker dans App 
+
+=> le problème est que l'on doit modifier tous les composants de notre code 
+=> très galère 
+=> props qui n'aurait aucun lien avec le composant concerné 
+
+=> Redux 
+=> il y a 5 ans l'équipe de React a mis en place des fonctionnalités pour se substituer à Redux
+
+=> createContext 
+=> useContext 
+
+créer deux composants 
+
+=> Action 
+=> Liste 
