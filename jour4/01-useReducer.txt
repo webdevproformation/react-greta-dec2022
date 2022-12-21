@@ -1,0 +1,42 @@
+
+
+useState()
+
+function reducer(state, action){
+    switch(action.type){
+        case "ACTION1" :
+            return state + action.payload 
+        case "" :
+        case "" :
+        default :
+
+    }
+}
+
+const [ state , dispatch ] = useReducer(reducer , {})
+
+
+<button onClick={ () => dispatch("ACTION1") }></button>
+
+-> dispatch peut être utilisé aussi comme ça
+remplace la paramètre de dispatch par un objet { type : "nom_action" , payload : "informations à envoyer au state du depuis la vue"  }
+
+<button onClick={ () => dispatch({ type: "ACTION1" , payload : 10 }) }></button>
+
+
+
+
+
+const [ valeur , dispatch ] = useReducer(reducer , [{login : "azerty" , password:"12456"} , ["pomme", "poire"]])
+
+--------------
+
+const [ produits , dispatch ] = useReducer(reducer , ["pomme", "poire"])
+
+Composant => liste des produits 
+
+const [ produits , dispatch ] = useReducer(reducer , {login : "azerty" , password:"12456"})
+
+Composant => formulaire de connexion
+
+
