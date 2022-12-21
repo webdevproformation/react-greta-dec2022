@@ -25,3 +25,8 @@ const Connexion = () => {
 }
  
 export default Connexion;
+
+// Partager Parent <=> Enfant
+
+// useReducer / formulaire / 
+// useContext / createContext Cousin / frère et soeur 

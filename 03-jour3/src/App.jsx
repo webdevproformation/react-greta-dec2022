@@ -6,6 +6,7 @@ import Contact from "./composants/Contact"
 import Exemple1 from "./composants/Exemple1"
 import Exemple2 from "./composants/Exemple2"
 import Exo1 from "./composants/Exo1"
+import LastExo from "./composants/LastExo"
 import Menu from "./composants/Menu"
 
 function App() {
@@ -36,6 +37,9 @@ function App() {
         </div>
         <div className="col-3">
           <Connexion2 />
+        </div>
+        <div className="col-3">
+          <LastExo />
         </div>
       </section>
     </div>

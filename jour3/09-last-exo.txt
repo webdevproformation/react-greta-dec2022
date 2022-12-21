@@ -10,3 +10,6 @@ contient un formulaire qui contient 4 champs :
 burger / frite / blanquette de veau / pizza 
 
 lorsque l'on soumet le formulaire => récupérer les valeurs saisies / choisies / cochez par l'utilisateur (afficher dans la console les résultats)
+
+
+https://prod.liveshare.vsengsaas.visualstudio.com/join?39465DAE51217E1B6D8E79AFF006E1B25342
