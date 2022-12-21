@@ -18,6 +18,11 @@ function reducer(state, action){
             return cloneState.filter( function( item ) {
                 return item.id !== action.payload
             } )
+        case "MODIF_STATUT" : 
+            return cloneState.map(function(item){
+                if(item.id === action.payload) return {...item , statut : !item.statut}
+                return item
+            })
         default :
             return state ;
     }
@@ -34,6 +39,7 @@ const Todo = () => {
         e.preventDefault();
         console.log(inputRef.current.value)
         dispatch({ type : "ADD_TACHE" , payload : inputRef.current.value })
+        inputRef.current.value  = ""; 
     }
 
     return ( <>
@@ -50,7 +56,10 @@ const Todo = () => {
             <ListGroup>
                 {taches.map(function(item){
                    return <ListGroup.Item key={item.id} className="d-flex justify-content-between align-items-center">
-                    {item.nom}
+                    {item.statut ? 
+                        <del onDoubleClick={() => dispatch({type:"MODIF_STATUT" , payload: item.id})}>{item.nom}</del> :
+                        <span onDoubleClick={() => dispatch({type:"MODIF_STATUT" , payload: item.id})}>{item.nom}</span>
+                    }
                     <Button variant="outline-danger" onClick={() => dispatch({type : "SUPPR_TACHE", payload: item.id})}>
                         supprimer
                     </Button>
