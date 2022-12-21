@@ -1,10 +1,18 @@
-import { createContext } from "react";
+import { createContext , useReducer } from "react";
 
 export const UserContext = createContext();
 
-export const UserContextProvider = (props) => {
+function reducer(state, action){
+    switch(action.type){
 
-    return <UserContext.Provider>
+        default : 
+            return state ;
+    }
+}
+
+export const UserContextProvider = (props) => {
+    const [profil , dispatch] = useReducer(reducer , {login : "alain" , password : "123", logged : false})
+    return <UserContext.Provider value={{profil : profil, dispatch:dispatch }}>
         {props.children}
     </UserContext.Provider>
 }
