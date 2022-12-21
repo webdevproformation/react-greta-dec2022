@@ -8,7 +8,7 @@ function reducer(state, action){
     const cloneState = _.cloneDeep(state)
     switch(action.type){
         case "ADD_TACHE" : 
-            cloneState.push({
+            cloneState.unshift({
                 id : Math.random() + "", // 0 1 => "0.6775457585687" générer chiffre unique pour bien distinguer les tâches 
                 nom : action.payload,
                 statut : false 
@@ -37,9 +37,14 @@ const Todo = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(inputRef.current.value)
-        dispatch({ type : "ADD_TACHE" , payload : inputRef.current.value })
-        inputRef.current.value  = ""; 
+        if(inputRef.current.value){
+
+            dispatch({ type : "ADD_TACHE" , payload : inputRef.current.value })
+            inputRef.current.value  = "";
+            return  
+        }
+        alert("veuillez remplir le champ !!");
+
     }
 
     return ( <>
