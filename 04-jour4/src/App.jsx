@@ -5,6 +5,9 @@ import Exo1 from "./composants/Exo1";
 import Action from "./composants/Action";
 import Liste from "./composants/Liste";
 import { ListeContextProvider } from "./contexts/listeContext";
+import { UserContextProvider } from "./contexts/userContext";
+import Connexion from "./composants/Connexion";
+import Profil from "./composants/Profil";
 
 const App = () => {
   
@@ -25,6 +28,12 @@ const App = () => {
             <Action />
             <Liste />
           </ListeContextProvider>
+        </Col>
+        <Col xs={4}>
+          <UserContextProvider>
+            <Profil />
+            <Connexion />
+          </UserContextProvider>
         </Col>
       </Row>
     </Container>
