@@ -1,0 +1,27 @@
+créer un nouveau composant 
+Exo1 
+
+utilise le hook useReducer
+
+gérer un state qui par défaut est un tableau vide 
+
+dans la partie vue => formulaire 
+deux champs 
+<input> => saisir un titre
+<textarea> => saisir du contenu 
+bouton de soumission => ajouter votre article dans le state 
+lorsque vous cliquez sur le bouton ajouter 
+{
+    id : numéro unique 
+    titre : titre saisit
+    contenu : contenu saisi
+    like : 0
+}
+
+afficher à la suite du formulaire l'ensemble des articles créés via le formulaire 
+<article>
+    <h2>titre saisi</h2>
+    <p>contenu</saisi>
+    <span>0</span>
+</article>
+si vous cliquez sur le chiffre 0 => augmenter le nombre de like de +1

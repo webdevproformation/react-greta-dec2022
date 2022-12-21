@@ -28,7 +28,6 @@ function reducer(state, action){
     }
 }
 
-
 const Todo = () => {
     const [taches , dispatch] = useReducer(reducer , [])
     const inputRef = useRef();
@@ -38,13 +37,11 @@ const Todo = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if(inputRef.current.value){
-
             dispatch({ type : "ADD_TACHE" , payload : inputRef.current.value })
             inputRef.current.value  = "";
             return  
         }
         alert("veuillez remplir le champ !!");
-
     }
 
     return ( <>
