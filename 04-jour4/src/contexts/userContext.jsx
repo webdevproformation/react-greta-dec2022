@@ -16,7 +16,6 @@ function reducer(state, action){
             }
             return {...cloneState , message : "identifiants invalides"}
         case "DECONNEXION" :
-            console.log("ici")
             return { ...cloneState, logged : false }
         default : 
             return state ;
