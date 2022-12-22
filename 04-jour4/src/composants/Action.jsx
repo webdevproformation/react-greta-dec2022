@@ -1,5 +1,4 @@
 import { Button } from "react-bootstrap"
-
 import { ListeContext } from "../contexts/listeContext" // store 
 import { useContext } from "react" // hook pour utiliser le store 
 

@@ -1,0 +1,176 @@
+1 je vais créer 2 composants + context 
+
+
+Formulaire 
+un input de type texte 
+select (menu déroulant) 3 valeurs encours / finalisé / à planifier 
+bouton de soumission 
+
+=> https://react-bootstrap.github.io/
+
+#1 créer le fichier composants/Formulaire.jsx
+vue du composant 
+<></> => Fragment 
+attention il faut importer les composants de react-bootstrap
+<form>           => <Form> 
+<input type="text">  => <Form.Control>
+<select>        => <Form.Select>
+<input type="submit">   <Button type="submit"> 
+
+<Form.Control>
+on peut ajouter des attributs au composant className="mb-3"
+margin-bottom:3rem (pour espacer les composants en hauteur)
+ajouter un placeholder => permet d'avoir un texte d'explication dans le champ de saisi
+
+<Form.Select> => dans les options de mettre le premier vide (pour inciter l'utilisateur à choisir) + className="mb-3"
+
+<Button type="submit"> choix de la couleur avec variant="success" vert 
+
+=> aller sur la documentation officielle https://react-bootstrap.github.io/
+=> recherche => saisir le nom de la balise dans le menu
+
+#2 exécuter le composant formulaire dans le fichier App.js 
+
+#3 composants/Formulaire.jsx 
+récupérer les données saisies dans le formulaire et les traiter 
+
+<Form> qui contient tout le formulaire 
+ajouter un attribut onSubmit={handleSubmit} => lorsque le formulaire est soumis (cliquer sur le bouton submit) alors exécuter la fonction handleSubmit
+
+ajouter la fonction handleSubmit dans le Composant 
+
+const handleSubmit = (e) => { // cette fonction contient un paramètre e 
+                              // e => Event / objet de javascript qui permet
+                              // d'intercepter l'evènement qui a a été déclenché
+                              // la soumission
+                              // par défaut cet évènement entraine un 
+                              rechargement de page 
+                              // je veux le bloquer 
+    e.preventDefault() // je bloque le rechargement automatique de la page 
+
+    // récupérer les valeurs des champs Select et input 
+    // utiliser le hook useRef()
+    // importer / créer deux variables inputRef/ selectRef / ajouter dans Form.Select et Form.Control un attribut ref
+    récupérer via 
+    
+    const formulaire = {
+            input : inputRef.current.value, // récupérer la valeur saisie dans input 
+            select : selectRef.current.value
+        }
+
+    // traiter 
+    => console.log() voir si on récupére bien les valeurs ET je fais un test manuel dans le composant 
+
+    => dispatch ... => ajouter plus tard (lorsque l'on aura fini le context) (#10)
+
+    => reset le formulaire (vider le formulaire)remettre en position initial
+    e.target.reset()
+}
+
+#4 deuxieme composant
+composants/Compteur.jsx 
+
+// vue 
+h1 qui contient un chiffre => <h1>0</h1>
+
+d'où vient le chiffre => du contexte 
+
+#5 exécuter ce composant dans le fichier App.js en dessous du Formulaire
+et regarder le composant dans le navigateur pour voir si tout fonctionne 
+
+#6 je dois partager des informations d'un composant vers un autre 
+si relation Parent Enfant => props 
+si relation autre => context xxxx relation frère ce qui est le cas ici 
+
+#7 créer un context 
+contexts/compteurContext.jsx 
+=> tous les fichiers de contexte se ressemblent => toujours avoir le même contenu 
+
+4 parties dans le fichier 
+
+a import createContext 
+b créer le contexte 
+c créer le Provider 
+d fonction réductrice 
+
+
+// #a 
+import {createContext} from "react"
+
+// #b 
+export const CompteurContext = createContext() ; // store $_SESSION 
+// etat / state global (données/ fonction) de notre application 
+// que l'on veut partager avec plusieurs composants 
+
+// #c
+// composant qu'il faut utiliser dans App pour dire exactement sur quels composants le state global doit partager ses datas
+Provider => Fournisseur 
+export const CompteurContextProvider = (props) => {
+    return <CompteurContext.Provider>
+        {props.children}
+    </CompteurContext.Provider>
+}
+
+=> pour l'instant ce context est vide 
+=> ajouter le hook useReducer 
+permet gérer un state et d''avoir une seule fonction qui permet de modifier l'état => la fonction réductrice 
+
+
+// #a #d
+import {createContext , useReducer} from "react"
+
+// #b 
+export const CompteurContext = createContext() ;
+
+// #c
+export const CompteurContextProvider = (props) => {
+    //#d 
+    const [compteur, dispatch] = useReducer(reducer , 0) // valeurs stocker dans la $_SESSION
+                                        // fonction et une valeur 
+                                        // retourne compteur => la valeur de la $_SESSION 
+                                        // dispatch modifier la valeur compteur 
+    return <CompteurContext.Provider>
+        {props.children}
+    </CompteurContext.Provider>
+}
+
+// # d
+function reducer(state , action){ // toujours ce pattern par défaut 
+    switch(action.type){
+        default :
+            return state ;
+    }
+}
+
+#e #8
+on veut partager ces deux variables dans les composants frères 
+ const [compteur, dispatch]  
+compteur => composant Compteur 
+dispatch => composant Formulaire
+
+deux étapes => 
+- ajouter un attribut au composant <CompteurContext.Provider value={{compteur: compteur, dispatch: compteur}}>
+- emballer les composants Formulaire et COmpteur dans App 
+
+#9 utiliser le compteur du Provider dans le composant COmpteur 
+composants/Compteur.jsx 
+importer le #b du context ET importer le hook useContext 
+
+exécuter le context dans le hook => peut accéder à la variable compteur
+
+il suffit de l'afficher dans la vue 
+
+#10
+composant/Formulaire.jsx 
+importer le #b du context ET importer le hook useContext 
+exécuter le context dans le hook => peut accéder à la variable dispatch 
+
+il suffit de l'executer dans la fonction handleSubmit()
+
+ dispatch({type:"AJOUTER"}) => faire augmenter le compteur de + 1
+
+
+#11 contexts/compteurContext.jsx 
+modifier la fonction réductrice pour ajouter l'action "AJOUTER"
+dans notre exemple la valeur est une primitive => chiffre dans ce cas pas besoin de faire un cloneDeep
+si j'avais eu un tableau ou objet => conseil faire un cloneDeep 

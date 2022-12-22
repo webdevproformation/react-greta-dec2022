@@ -9,6 +9,9 @@ import { ListeContextProvider } from "./contexts/listeContext";
 import { UserContextProvider } from "./contexts/userContext";
 import Connexion from "./composants/Connexion";
 import Profil from "./composants/Profil";
+import Formulaire from "./composants/Formulaire";
+import Compteur from "./composants/Compteur";
+import { CompteurContextProvider } from "./contexts/compteurContext";
 
 const App = () => {
   
@@ -38,6 +41,16 @@ const App = () => {
         </Col>
         <Col xs={4}>
           <A />
+        </Col>
+        <Col xs={4}>
+          <CompteurContextProvider>
+            {/** // #e #8 */}
+            {/** 6 */}
+            {/** 2 */}
+            <Formulaire />
+            {/** 5 */}
+            <Compteur />
+          </CompteurContextProvider>
         </Col>
       </Row>
     </Container>
