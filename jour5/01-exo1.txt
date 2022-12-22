@@ -1,0 +1,20 @@
+Dans le projet 04-jour4 
+
+créer deux composants 
+Formulaire 
+un input de type texte 
+select (menu déroulant) 3 valeurs encours / finalisé / à planifier 
+bouton de soumission 
+
+Compteur 
+h1 dans lequel vous allez écrire un chiffre 
+
+créer un compteurContext dans lequel vous allez stocker et exporter
+context et un provider 
+
+dans le Provider vous allez utiliser useReducer 
+par défaut le context global ($_SESSION) est un 0
+
+dans la fonction réductrice de useReducer vous avez une seul cas => AUGMENTER
+
+si vous remplissez le formulaire et qu'il est soumis => augment 0 du context  qui va se synchroniser avec le composant Compteur  

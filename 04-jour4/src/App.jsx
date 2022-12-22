@@ -1,6 +1,7 @@
 import Menu from "./composants/Menu";
 import { Container , Row, Col } from "react-bootstrap"
 import Todo from "./composants/Todo";
+import A from "./composants/A";
 import Exo1 from "./composants/Exo1";
 import Action from "./composants/Action";
 import Liste from "./composants/Liste";
@@ -34,6 +35,9 @@ const App = () => {
             <Profil />
             <Connexion />
           </UserContextProvider>
+        </Col>
+        <Col xs={4}>
+          <A />
         </Col>
       </Row>
     </Container>

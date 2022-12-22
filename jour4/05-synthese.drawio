@@ -43,6 +43,9 @@
                 <mxCell id="12" value="Connexion&lt;br&gt;const profil, dispatch = useContext(UserContext)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="420" y="260" width="310" height="60" as="geometry"/>
                 </mxCell>
+                <mxCell id="15" value="$_SESSION" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="770" y="90" width="70" height="30" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
