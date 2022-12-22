@@ -174,3 +174,12 @@ il suffit de l'executer dans la fonction handleSubmit()
 modifier la fonction réductrice pour ajouter l'action "AJOUTER"
 dans notre exemple la valeur est une primitive => chiffre dans ce cas pas besoin de faire un cloneDeep
 si j'avais eu un tableau ou objet => conseil faire un cloneDeep 
+
+
+// cas pratique créer un nouveau projet 05-jour5 
+  
+
+=> réaliser le projet avec React / context / Formulaire 
+
+=> e commerce / authentification => 
+13h00

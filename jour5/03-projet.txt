@@ -1,0 +1,178 @@
+#0 set up (mise en place du projet)
+
+a/ téléchargement / lancer projet 
+stopper le server de l'ancien projet 
+Ctrl + C puis O
+cd .. remonter à la racine du dossier de formation
+créer un nouveau projet 
+npm create vite
+05-jour5
+React
+Javascript 
+
+cd 05-jour5
+npm install => installer les dépendances de base de React
+useState / useReducer / jsx installé par défaut 
+dans ces dépendances il n'y a lodash / bootstrap / react-bootstrap
+npm i lodash bootstrap => ajouter des dépendances supplémentaires au projet 
+npm run dev => lancer le serveur de dev
+
+http://localhost:5173/
+
+b/ supprimer quelques fichiers mis par défaut dans src/
+nettoyer le contenu des fichiers 
+à supprimer 
+App.css
+index.css 
+dossier assets/
+
+main.jsx enlever la ligne import './index.css'
+App.jsx vider le fichier : 
+
+const App = () => {
+  return ( <>bonjour</> );
+}
+ 
+export default App;
+
+=> vérifier que le navigateur afficher bonjour 
+
+c/ ajouter bootstrap dans le fichier main.jsx
+
+import "bootstrap/dist/css/bootstrap.min.css"
+
+=> police de caractère est plus jolie
+
+#1 regarder le design => plan d'action 
+
+Combien de Composant je dois créer ???? 
+
+5 composants à créer 
+Total
+Synthese
+Detail
+    LigneDetail 
+Formulaire 
+
+Est ce que j'ai besoin de partager des informations entre les composants 
+OUI !!! ils sont besoin de partager des informations 
+plusieurs composants frères => context 
+
+créer un context
+
+CRUD : 
+Create => action avec le formulaire 
+Read  => Total / Synthese / Details / ligneDetail
+Update => ligneDetail
+Delete  => ligneDetail 
+
+=> d'abord créer les composants avec données factices 
+=> pour réaliser la mise en page 
+
+=> il n'y a de base de données / il n'y a que 1 CONTEXTE 
+
+=> relier la base de données au contexte / localStorage 
+
+#2 composants/Total.jsx
+
+un titre et un chiffre en dessous  qui sont centrés
+
+const Total = () => {
+    return ( <div className="text-center">
+        <h1>Total</h1>
+        <p>123</p>
+    </div> );
+}
+ 
+export default Total;
+
+#3 exécuter ce composant dans App.jsx
+
+#4 composants/Synthese.jsx
+
+#5 exécuter ce composant dans App.jsx
+
+#6 #7 composants/Details.jsx
+j'ai besoin de créer un tableau factice qui contient des données factices pour  dès maintenant faire une boucle 
+
+j'ai ajouté une information dans le tableau la propriété status 
+false => afficher la ligne 
+true => dans la ligne un formulaire 
+
+#8 exécuter le Details dans App.jsx 
+
+#9 composants/Formulaire.jsx 
+
+#10 exécuter le Formulaire dans App.jsx 
+
+#11 créer un context => contexts/operationContext.jsx
+=> a/ import createContext
+=> b/ creation du contexte 
+=> c/ création du provider
+=> d/ fonction réductrice => 
+=> e/ ajouter le hook useReducer dans le provider
+    et j'en profite pour lui donner une valeur par défaut [{}, {}]
+=> f/ ajouter l'attribut value au provider en lui passant les deux  operation, dispatch de useReducer
+=> le context est prêt à 80% => il manque les actions dans le reducer 
+
+#12 partager operation, dispatch à tous les composants 
+App.jsx 
+englober l'ensemble des Total / Details ... dans le Provider 
+
+#13 Total et Synthese récupérer operation
+
+import le hook useContext 
+import le context #11 b/
+exécuter context via useContext 
+
+utiliser la valeur operation dans la vue 
+{operation.reduce(function(total, valeur){
+    return total += valeur.montant
+}, 0)}
+
+#14 import le hook useContext 
+import le context #11 b/
+exécuter context via useContext 
+remplacer la variable temporaire par les opérations 
+
+#15 => récupérer les données saisies dans le formulaire 
+=> dispatch du context pour ajouter des nouvelles opérations dans les autres composants 
+
+onSubmit={handleSubmit}
+useRef 
+
+const handleSubmit = (e) => { // 15
+    e.preventDefault(); // bloquer le rechargement de page
+    // récupérer les informations saisies
+    // attention pour le champ montant => lorsque vous récupérer le chiffre "123"
+    // "123" => parseInt("123") => 123
+    const operation = { nom : nomRef.current.value , montant : parseInt(montantRef.current.value) }
+    // modifier le state globale
+    dispatch({type:"ADD" , payload : operation})
+    reset du formulaire 
+    nomRef.current.value = "";
+    montantRef.current.value = "";
+}
+
+#16 ajouter dans le reducer l'action ADD 
+
+#17 suppression LigneDetail 
+ajouter une action au clique sur le bouton supprimer 
+
+onClick={() => dispatch({type:"SUPPR" , payload : item.id})}
+
+fonction réductrice pour ajouter l'action 
+
+#18 modifier  LigneDetail 
+
+fonction reductrice 
+
+#19 valider les valeurs modifiées
+
+const handleChange = (e) => { // 19 
+        const cloneValeurs = {...valeurs}
+        cloneValeurs[e.target.name] = e.target.value
+        setValeurs(cloneValeurs); 
+    }
+permet de pouvoir modifier les champs du formulaire 
+

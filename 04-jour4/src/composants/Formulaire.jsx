@@ -2,7 +2,10 @@ import {Form , Button } from "react-bootstrap"
 import {useRef , useContext} from "react" // #3 #10
 import { CompteurContext } from "../contexts/compteurContext" // #10
 
-
+/**
+ * @description Formulaire react avec input et select utilisant le context pour traiter ses données
+ * @returns jsx
+ */
 const Formulaire = () => {
     const {dispatch} = useContext(CompteurContext); // #10
     // #3
