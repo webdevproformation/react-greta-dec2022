@@ -1,0 +1,27 @@
+les données saisies sont stockées dans la RAM du navigateur 
+si vous saisissez plein d'operations et que vous actualisez la page 
+=> perdre toutes les opérations 
+
+Même si on fait un actualiser => les données restent (PERSISTANCE)
+
+Base de Données logiciel dans lequel vous allez écrire sur le disque dur 
+localStorage zone mémoire dans la navigateur qui est persistance 
+
+localStorage.getItem() => récupérer
+localStorage.setItem() => insérer
+
+
+const data = localStorage.getItem("data") ? JSON.parse(localStorage.getItem("data")) : [ // e
+        {id : 1 , nom : "billet" , montant : -500, status : true} ,
+        {id : 2 , nom : "salaire" , montant : 700, status : false}    
+    ]
+si il y a un localStorage alors utilise le sinon utilise le tableau 
+
+localStorage.getItem("data")
+"[{"id":1,"nom":"billet","montant":-500,"status":true},{"id":2,"nom":"salaire","montant":700,"status":false},{"id":3,"nom":"tutu","montant":123,"status":false}]"
+
+JSON.parse() pour le transformer en objet js classique 
+
+si je fais un ajout => 
+localStorage.setItem("data" , JSON.stringify(cloneState))
+state modifié => remplacer dans la propriété data du localStorage 
