@@ -21,7 +21,11 @@ console.log(a + b) ; // programmation synchrone
 
 on attend que chaque instruction soit exécutée à 100% pour passer à la suivante
 
+matin
 https://prod.liveshare.vsengsaas.visualstudio.com/join?8FE30163AFE823F66989D77C5A24C9938556
+
+après midi
+https://prod.liveshare.vsengsaas.visualstudio.com/join?2BC600EA1D76C4A735738A7B051054C86BCB
 
 ---------------------
 
