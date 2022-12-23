@@ -5,7 +5,7 @@ export function useCocktails(){
     const [lodding, setLoading] = useState(true)
 
     async function getCocktails(){
-        const reponse = await fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
+        const reponse = await fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=rum")
         const cocktails = await reponse.json()
         setLoading(false)
         setCocktails(cocktails.drinks.map(function(item){
