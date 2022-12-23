@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            const a = 2 ; // créer une variable // 1
+            setTimeout( () => { 
+                const b = 3 
+            } , 1000) //  const b = 3  va s'exécuter dans 1 seconde
+            console.log(a + b) ; // la variable b n'existe pas 
+        // js ne va pas attendre que le setTimeout soit executé => tout de suite exécuté le console.log
+
+        // exemple type de programmation asynchrone 
+        // comme gérer ce genre de cas de figure avec Javascript ??? 
+
+        // 3 techniques 
+
+        // callback (technique la plus ancienne)
+        // new Promise() .then().catch()
+        // new Promise() avec en + les mots clé await async 
+
+        // demander à javascript d'ATTENDRE que le code soit exécuté avant de passer à la suite 
+    </script>
+</body>
+</html>

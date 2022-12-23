@@ -1,0 +1,38 @@
+support de cours 
+url  : https://formation.webdevpro.net/react/
+login : react
+password : fb 
+
+toutes les notes de cours sont partagées sur un github
+=> https://github.com/webdevproformation/react-greta-dec2022
+
+
+----------------------
+
+programmation asynchrone ??? 
+
+programmation synchrone ??? 
+
+lorsque le programme s'exécute dans l'ordre dans lequel vous l'avez écrit 
+
+const a = 2 ;
+const b = 10 ;
+console.log(a + b) ; // programmation synchrone 
+
+on attend que chaque instruction soit exécutée à 100% pour passer à la suivante
+
+https://prod.liveshare.vsengsaas.visualstudio.com/join?8FE30163AFE823F66989D77C5A24C9938556
+
+---------------------
+
+programmation asynchrone 
+
+le programme va s'exécuter dans une ordre différent que celui que vous avez écrit
+
+const a = 2 ; // créer une variable 
+setTimeout( () => { 
+    const b = 3 
+} , 1000) //  const b = 3  va s'exécuter dans 1 seconde
+console.log(a + b) ; // affichage, s'excuter AVANT que le setTimeout soit exécuté 
+
+

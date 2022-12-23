@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            /* const a = 2 ; 
+            setTimeout( () => { 
+                const b = 3 
+            } , 1000) 
+            console.log(a + b) ;  // erreur b n'existe pas*/
+
+            // solution c'est de mettre le console.log() dans le setTimeout 
+            /* const a = 2 ; 
+            setTimeout( () => { 
+                const b = 3 
+                console.log(a + b) ;
+            } , 4000)  */
+
+            // une manière de faire d'utiliser les callback 
+            // function comme paramètre d'une autre fonction
+
+            function genererChiffre (callback){ 
+                // créer une fonction qui contient 1 paramètre exécutable
+                setTimeout( () => { 
+                    const b = 3 
+                    //console.log(a + b) ;
+                    callback(b)
+                },4000)
+            }
+
+            const c = 2 ; 
+            genererChiffre ((b) => { // exécuter la fonction et je lui met comme paramètre la définition de la fonction la fin du setTimeout 
+                console.log(c + b)
+            })
+
+    </script>
+</body>
+</html>
+<!--    
+    créer le fichier 03-exo.html
+    dans fichier 
+    créer une variable c qui contient le valeur "bonjour"
+    au bout de 3 secondes vous allez afficher dans la console le texte "bonjour"
+    2 secondes plus tard (en tout 5 secondes) vous allez afficher dans la console le texte "fin exécution"
+    utilisez les callback pour réaliser cet exercice
+-->
