@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            créer une variable c qui contient le valeur "bonjour"
+            au bout de 3 secondes vous allez afficher dans la console le texte "bonjour"
+            2 secondes plus tard (en tout 5 secondes) vous allez afficher dans la console le texte "fin exécution"
+        */
+
+        // solution 1
+        function direBonjour(callback){
+            setTimeout( () => {
+                callback()
+            }, 3000)
+        }
+
+        function finExecution (){
+            setTimeout( () => {
+                console.log("fin exécution")
+            } , 2000)
+        }
+
+        /* const c = "bonjour";
+        direBonjour(() => {
+            console.log(c);
+            finExecution ()
+        }) */
+
+        // réussi à exécuter des opérations asynchrones dans l'ordre que l'on veut 
+
+        // solution 2 imbriquer les setTimeout les uns dans les autres 
+        const c = "bonjour"
+
+        setTimeout( () => {
+            console.log(c);
+            setTimeout( () => {
+                console.log("fin exécution")
+                    setTimeout( () => {
+                        console.log("action en +") // ici la fin 
+                    } , 1000)
+            } , 2000)
+        }, 3000)
+
+        // callback hell 
+        // code la dernière ligne == à la dernière chose à exécuter
+        // callback hell => l'enfer des callback => 
+        // code qui est sous la forme d'une pyramide 
+        // le code se finit au milieu de la pyramide
+        // bonjour et fin exécution 
+        // vue que le code est imbriqué => difficile à faire évoluer 
+        // à partir de la version 6 de javascript (2015) ajouté un nouveau mot clé Promise 
+        // avec ce nouveau mot clé vous allez pouvez créer un code asynchrone plus propre et plus lisible / plus maintenable 
+        
+    </script>
+</body>
+</html>
