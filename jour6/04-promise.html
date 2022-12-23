@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            créer une variable c qui contient le valeur "bonjour"
+            au bout de 3 secondes vous allez afficher dans la console le texte "bonjour"
+            2 secondes plus tard (en tout 5 secondes) vous allez afficher dans la console le texte "fin exécution"
+        */
+
+        // utiliser les promises pour gérer les opérations asynchrones 
+
+        function direBonjour(){
+            return new Promise(function(resolve, reject){
+                setTimeout(() => {
+                    console.log(c)
+                    resolve()
+                } , 3000)
+            })
+        }
+
+        function finExecution(){
+            return new Promise(function(resolve, reject){
+                setTimeout( () => {
+                    console.log("fin exécution")
+                    resolve();
+                    //reject("erreur requête") // remplace resolve par reject => un traitement ne s'est pas passé correctement dans la Promise
+                }  , 2000)
+            })
+        }
+
+        function actionEnPlus(){
+            return new Promise(function(resolve, reject){
+                setTimeout( () => {
+                    console.log("action en +")
+                    resolve()
+                }  , 1000)
+            })
+        }
+
+        const c = "Bonjour";
+        direBonjour().then(() => finExecution())
+                     .then( () => actionEnPlus())
+                     .catch((message) => console.log(message))
+
+    </script>
+</body>
+</html>
