@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function action1(){
+            return new Promise(function(resolve, reject){
+                setTimeout(() => {
+                    console.log("vider la poubelle")
+                    resolve()
+                } , 3000)
+            })
+        }
+        function action2(){
+            return new Promise(function(resolve, reject){
+                setTimeout(() => {
+                    console.log("passer l'aspirateur")
+                    resolve()
+                } , 2000)
+            })
+            
+        }
+        function action3(){
+            return new Promise(function(resolve, reject){
+                setTimeout(() => {
+                    console.log("prendre un goûter")
+                    resolve()
+                } , 1000)
+            })
+        }
+        console.log("je vais ranger ma chambre")
+        action1().then(() => action2())
+                 .then(() => action3());
+
+    </script>
+</body>
+</html>
