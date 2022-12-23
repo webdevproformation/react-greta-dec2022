@@ -21,3 +21,15 @@ const Cocktails = () => {
 }
  
 export default Cocktails;
+
+// synthèse : 
+// créer des composants
+// faire communiquer des composants Parent Enfant (props) / Cousins (context)
+// hook 
+// useState / useEffect / useReducer / useRef / useContext (createContext)
+// créer nos propres hooks
+// jsx 
+
+// pas vue ensemble
+// useMemo useCallback 
+// redux 
