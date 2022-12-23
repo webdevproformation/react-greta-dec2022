@@ -8,7 +8,6 @@
 </head>
 <body>
     <script>
-
         function action1(){
             return new Promise(function(resolve, reject){
                 setTimeout(() => {
@@ -21,7 +20,8 @@
             return new Promise(function(resolve, reject){
                 setTimeout(() => {
                     console.log("passer l'aspirateur")
-                    resolve()
+                    //resolve()
+                    reject("erreur lors de l'action2")
                 } , 2000)
             })
             
@@ -34,12 +34,33 @@
                 } , 1000)
             })
         }
-        console.log("je vais ranger ma chambre")
+
+
+        // a partir de la version 6 de javascript 
+        // await async 
+
+        // await => attendre 
+        // then() => remplacer par un await
+
+        /*
+         console.log("je vais ranger ma chambre")
         action1().then(() => action2())
                  .then(() => action3());
-        
-        // asynchrone avec await et async 
+        */
 
+        async function traitement(){
+            try{
+                console.log("je vais ranger ma chambre")
+                await action1() // attend que action1 soit exécutée à 100% pour passer à l'instruction suivante 
+                await action2() // attend que action2 soit exécutée à 100% pour passer à l'instruction suivante 
+                action3()
+            }catch(ex){
+                console.log(ex)
+            }
+        }
+
+        traitement(); 
+        
     </script>
 </body>
 </html>
