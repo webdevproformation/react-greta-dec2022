@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function requete1 (){
+            return new Promise(function(resolve, reject){
+                setTimeout( () => {
+                    const article = {id : 1 , auteurId : 1 , titre : "article 1"}
+                    console.log("requete 1")
+                    resolve(article)
+                }, 1000)
+            })
+        }
+        
+        function requete2 (article){
+            return new Promise(function(resolve, reject){
+                setTimeout( () => {
+                    const auteur = {id: 1 , prenom : "Alain" , nom : "DOE"}
+                    console.log("requete 2")
+                    resolve([auteur, article])
+                }, 2000)
+            })
+        }
+
+        // then
+        // 1ère solution 
+        /* requete1().then( (article) =>  requete2 (article)  )
+                  .then((tableau) => {
+                    const resultat = { ...tableau[1], auteur : tableau[0]}
+                    delete resultat.auteurId 
+                    console.log(resultat)
+                  }) */
+
+        // 2ème solution await async 
+
+        async function correction(){
+            const article = await requete1()
+            const tableau = await requete2(article)
+            const resultat = { ...tableau[1], auteur : tableau[0]}
+            delete resultat.auteurId 
+            console.log(resultat)
+        }
+        correction()
+    </script>
+</body>
+</html>
