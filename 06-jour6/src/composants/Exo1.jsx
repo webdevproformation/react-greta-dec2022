@@ -1,24 +1,10 @@
-import {useState, useEffect} from "react"
+import { useExo1 } from "../hook/useExo1"
 
 const Exo1 = () => {
-    const [users, setUsers] = useState([])
 
-    async function getAllUser(){
-        const reponse = await fetch("https://jsonplaceholder.typicode.com/users")
-        const users = await reponse.json()
-        setUsers(users.map(function(item){
-            return {
-                id : item.id ,
-                nom : item.username ,
-                email : item.email ,
-                phone : item.phone
-            }
-        }));
-    }
+    const users = useExo1(); // useState / useEffect / requête ajax => stocker dans une fonction à part 
+    // custom hook 
 
-    useEffect(() => {
-        getAllUser()
-    } , [] )
     return ( <>
         <h2>Exo 1</h2>
         <div className="row">
