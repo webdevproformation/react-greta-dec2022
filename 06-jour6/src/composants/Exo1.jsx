@@ -24,7 +24,7 @@ export default Exo1;
 // appeler l'api suivante 
 // https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
 // réaliser une requête sur cette API 
-// affichage 
+// affichage pour chaque cocktail les informations 
 /* nom 
 img 
 instruction de préparation
