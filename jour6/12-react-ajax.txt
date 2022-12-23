@@ -1,0 +1,59 @@
+const Requete = () => {
+
+    return ( <>requete ajax</> );
+}
+ 
+export default Requete;
+
+------------------------
+
+je souhaite réaliser une requête Ajax dans le composant 
+Appeler une API pour récupérer des données les afficher dans le composant 
+
+------------------------
+
+1ère idée ajouter une fonction asynchrone directement dans le composant 
+
+
+const Requete = () => {
+
+    const [data , setData] = useState([])
+
+    async function getArticle(){
+        ... await fetch()
+        data =>
+        // console.log(data)
+        setData(data)
+    }
+
+    // quand exécuter cette fonction ??? 
+    // cycle de vie du composant : les différentes étapes dans l'affichage du composant 
+    // dans le navigateur
+    // 3 grandes phases dans le cycle de vie du composant dans le navigateur  
+    // mounted => lorsque le composant a fini d'être affiché dans le navigateur 
+    // updated => lorsque le composant est rerender suite à la modification d'une props ou encore d'une des valeurs de son state  
+    // unmounted => lorsque le composant est supprimé du navigateur
+
+    // les requêtes asynchrones DOIVENT être exécutée lorsque le composant est mounted 
+    // pour intercepter les etapes du cycle de vie du composant utiliser le hook useEffect()
+    // useEffect est une fonction / hook de React 
+    // prend 2 paramètres 
+    // callback
+    // tableau => tableau des dépendances 
+    useEffect( function(){}, [] )
+
+
+    useEffect( function(){}, [] ); // tableau vide => mounted 
+    useEffect( function(){}, [props, state] ); // tableau vide => updated 
+
+    useEffect(  function(){ 
+        return () => {
+            // sera exécuté lors de la phase unmounted 
+        }
+    }, [])
+
+
+    return ( <>requete ajax</> );
+}
+ 
+export default Requete;
