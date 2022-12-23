@@ -44,7 +44,7 @@ const Requete = () => {
 
 
     useEffect( function(){}, [] ); // tableau vide => mounted 
-    useEffect( function(){}, [props, state] ); // tableau vide => updated 
+    useEffect( function(){}, [props, state] ); // tableau contenant des state props  => updated 
 
     useEffect(  function(){ 
         return () => {
