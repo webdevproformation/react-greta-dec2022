@@ -2,11 +2,13 @@ import {useEffect, useState} from "react"
 
 const Requete = () => {
     const [data, setData] = useState([])
+    const [loading , setLoading] = useState(true)
 
     async function getArticles(){
         const reponse = await fetch("https://jsonplaceholder.typicode.com/photos?_start=10&_end=15")
         const photos = await reponse.json();
         setTimeout(() => {
+            setLoading(false);
             setData(photos/* .slice(0,5) */); // stocker le tableau récupéré depuis l'API dans la variable data 
         } , 2000)
         // qui est le state du composant 
@@ -19,12 +21,23 @@ const Requete = () => {
     return ( <>
         <h2>première requête ajax avec React</h2>
         <div className="row"> 
-            {data.map(function(item){
-                return <article key={item.id} className="col-2">
-                    <h2 className="fs-5">{item.title}</h2>
-                    <img src={item.url} alt="" className="img-fluid" />
-                </article>
-            })}
+            {loading ? 
+                <div class="d-flex justify-content-center">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            :
+                <>
+                    {data.map(function(item){
+                        return <article key={item.id} className="col-2">
+                            <h2 className="fs-5">{item.title}</h2>
+                            <img src={item.url} alt="" className="img-fluid" />
+                        </article>
+                    })}
+                </>
+            }
+            
         </div>
     </> );
 }
