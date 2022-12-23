@@ -48,6 +48,42 @@
             console.log(resultat)
         }
         correction()
+
+        // => https://reactivex.io/
+        // plus puissant que new Promise()
+        // Angular 
+        // jQuery => https://api.jquery.com/category/deferred-object/
     </script>
 </body>
 </html>
+<!--
+    créer le fichier 08-exo.html
+
+    requete1 => récupérer un tableau d'objet en 2 secondes (liste d'article)
+    [{id : 1 , titre : "article 1"}
+    ,
+    {id : 2 , titre : "article 2"}]
+
+    requete2 => récupérer un autre tableau en 3 secondes plus tard (liste de commentaires)
+    [
+        {id : 1 , auteur : "Alain" , text : "super article" , articleId : 1}
+        {id : 2 , auteur : "Alain" , text : "very good" , articleId : 1}
+        {id : 3 , auteur : "Alain" , text : "un commentaire" , articleId : 2}
+    ]
+
+    générer le tableau suivant et l'afficher dans la console 
+
+    [
+        {id : 1 , titre : "article 1" , commentaires : [
+                {id : 1 , auteur : "Alain" , text : "super article" , articleId : 1}
+                {id : 2 , auteur : "Alain" , text : "very good" , articleId : 1}
+            ]
+        }
+    ,
+        {id : 2 , titre : "article 2" , commentaires : [
+                {id : 3 , auteur : "Alain" , text : "un commentaire" , articleId : 2}
+            ]
+        }
+    ]
+
+-->
