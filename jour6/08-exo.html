@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function getArticles (){
+            return new Promise(function(resolve, reject){
+                setTimeout( () => {
+                    const articles = [{id : 1 , titre : "article 1"}
+                                    ,
+                                {id : 2 , titre : "article 2"}]
+                    console.log("getArticles")
+                    resolve(articles)
+                } , 2000)
+            })
+        }
+        
+        function getCommentaires (articles){
+            return new Promise(function(resolve, reject){
+                setTimeout( () => {
+                    const commentaires = [
+                        {id : 1 , auteur : "Alain" , text : "super article" , articleId : 1},
+                        {id : 2 , auteur : "Alain" , text : "very good" , articleId : 1},
+                        {id : 3 , auteur : "Alain" , text : "un commentaire" , articleId : 2}
+                    ]
+                    console.log("getCommentaires")
+                    resolve([articles, commentaires])
+                } , 3000)
+            })
+        }
+
+        // solution 1 avec then()
+       /*  getArticles().then((articles) => getCommentaires(articles))
+                     .then((tableau) => {
+                       const resultat = tableau[0].map( function(item){
+                            return {...item , commentaires : tableau[1].filter(function(item2){
+                                return item2.articleId === item.id
+                            })}
+                        } )
+                        console.log(resultat)
+                     }) */
+
+        // solution 1 avec await et async 
+
+        async function getArticlesAvecCommentaires (){
+            const articles = await getArticles()
+            const tableau = await getCommentaires(articles)
+            /* tableau = [
+                [{} , {}] liste des articles 
+                [] liste de commentaires 
+            ] */
+            const resultat = tableau[0].map( function(item){
+                return {...item , commentaires : tableau[1].filter(function(item2){
+                    return item2.articleId === item.id
+                })}
+            } )
+            console.log(resultat); 
+        }
+        
+        getArticlesAvecCommentaires ()
+
+    </script>
+</body>
+</html>
