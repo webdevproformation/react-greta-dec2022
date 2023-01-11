@@ -89,6 +89,22 @@ https://github.com/zalmoxisus/redux-devtools-extension
 
 
 
+------------------------
+
+npm i react-redux 
+permettre dispatch et getState facilement sur n'importe quelle composant dans l'arborescence de notre application
+
+------------------------
+
+
+Cas pratique 
+1 ajouter un bouton sous chaque article qui permet de supprimer un article 
+2 useDispatch => modifier votre state 
+3 ajouter une nouvelle action dans la fonction reductrice reducerArticle 
+
+
+
+
 
 
 

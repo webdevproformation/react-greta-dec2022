@@ -9,6 +9,10 @@ export const reducerArticle = (state = articles , action) => {
         case "ADD" : 
             cloneState.push(action.payload);
             return cloneState ; 
+        case "SUPPRIMER" :
+            return cloneState.filter(function(item){ 
+                return item.id !== action.payload
+            })
         default : 
             return state
     }
