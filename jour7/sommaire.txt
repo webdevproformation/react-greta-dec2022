@@ -1,0 +1,42 @@
+https://formation.webdevpro.net/react
+login : react
+password : fb
+
+blog 
+site internet 
+page d'accueil => liste des articles 
+page single => 1 article en particulier
+page de connexion => formulaire de connexion
+page de création de compte => login / password 
+404 
+back office 
+    CRUD des articles 
+    CRUD des profils users 
+
+json-server (API / Base de données)
+
+Partager des données entre les composants ( Redux )
+Bootstrap (librairie css )
+
+npm create vite
+nom projet : blog 
+technologie : React et Javascript 
+
+cd blog
+npm i
+npm i bootstrap redux react-router-dom
+npm i lodash joi 
+
+// bootstrap => css mise en page 
+// redux => state manager => state centralisé et partagé entre tous les composants 
+// react-router-dom => navigation 
+// lodash : librairie utilitaire cloneDeep traitement sur les objets
+// joi : librairie verifier en profondeur les valeurs saisies dans un formulaire (sécurité)
+
+npm run dev 
+
+créer un composant Nav =>
+barre de menu qui contient 3 liens 
+    Accueil 
+    créer profil 
+    connexion 
