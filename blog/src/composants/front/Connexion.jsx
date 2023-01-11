@@ -1,11 +1,12 @@
 import { useRef , useState } from "react"
 import Joi from "joi";
-import {useDispatch} from "react-redux"
+import {useDispatch, useSelector} from "react-redux"
 
 const Connexion = () => {
     const loginRef = useRef();
     const passwordRef = useRef();
     const [message, setMessage] = useState([]);
+    const user = useSelector((store) => store.reducerUser)
     const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
@@ -24,10 +25,15 @@ const Connexion = () => {
        /*  console.log(resultat)
         return */ 
 
-        if(error){
+        if(error || user.erreur){
             let message = [];
-            for(let m of error.details){
-                message.push(m.message)
+            if(error){
+                for(let m of error.details){
+                    message.push(m.message)
+                }
+            }
+            if(user.erreur){
+                message.push(user.erreur)
             }
             setMessage(message);
             return 

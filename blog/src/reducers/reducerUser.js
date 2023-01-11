@@ -15,7 +15,7 @@ export const reducerUser = (state = user , action) => {
             if(login === action.payload.login && password === action.payload.password){
                 return {...cloneState, isLogged : true}
             }
-            return {...cloneState}
+            return {...cloneState , erreur : "identifiants invalides"}
         default :
             return  state ;
     }
