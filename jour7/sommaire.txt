@@ -48,3 +48,25 @@ toutes les notes sont disponibles sur le même github.com (que la période en di
 
 https://github.com/webdevproformation/react-greta-dec2022
 
+
+------------------------------
+
+Router 
+
+tableau dans lequel vous allez liste des url disponibles dans le site 
+
+chaque url de la liste associer => composant 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
