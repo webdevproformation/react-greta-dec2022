@@ -5,7 +5,9 @@ import { configureStore } from "@reduxjs/toolkit"
 import { reducerArticle  } from "./reducers/reducerArticle"
 import { reducerUser } from "./reducers/reducerUser"
 import { Provider } from "react-redux"
-const store = configureStore({ reducer : { reducerArticle , reducerUser} })
+const store = configureStore({
+   reducer : { reducerArticle , reducerUser }
+  })
 // log le store 
 // console.log(store.getState())
 store.dispatch({ type : "ARTICLE_ADD" , payload : {id : 2 , titre : "Article 2" , contenu : "tutu"} })
