@@ -1,6 +1,7 @@
-import { useRef , useState } from "react"
+import { useRef , useState , useEffect } from "react"
 import Joi from "joi";
 import {useDispatch, useSelector} from "react-redux"
+import {useNavigate} from "react-router-dom"
 
 const Connexion = () => {
     const loginRef = useRef();
@@ -8,6 +9,13 @@ const Connexion = () => {
     const [message, setMessage] = useState([]);
     const user = useSelector((store) => store.reducerUser)
     const dispatch = useDispatch();
+    const navigate = useNavigate()
+
+    useEffect(function(){
+        if(user.isLogged){
+            navigate("/admin");
+        }
+    } , [user.isLogged])
 
     const handleSubmit = (e) => {
         e.preventDefault();

@@ -6,6 +6,7 @@ import { BrowserRouter , Routes , Route } from "react-router-dom"
 import Home from "./composants/front/Home"
 import CreateProfil from "./composants/front/CreateProfil"
 import Connexion from "./composants/front/Connexion"
+import Dashboard from './composants/back/Dashboard'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -15,6 +16,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route index element={<Home />}  />
           <Route path="creer-profil" element={<CreateProfil />}  />
           <Route path="connexion" element={<Connexion />}  />
+          <Route path="admin">
+            <Route index element={<Dashboard /> } />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
