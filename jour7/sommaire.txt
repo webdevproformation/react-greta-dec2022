@@ -58,6 +58,9 @@ tableau dans lequel vous allez liste des url disponibles dans le site
 chaque url de la liste associer => composant 
 
 
+https://prod.liveshare.vsengsaas.visualstudio.com/join?FA0AF0E04922F1D5F293B01D10D2537589A5
+
+
 
 
 
