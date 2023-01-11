@@ -6,6 +6,7 @@ import { reducerArticle as reducer } from "./reducers/reducerArticle"
 
 const store = configureStore({ reducer })
 
+// log le store 
 console.log(store.getState())
 store.dispatch({ type : "ADD" , payload : {id : 2 , titre : "Article 2" , contenu : "tutu"} })
 console.log(store.getState())

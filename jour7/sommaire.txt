@@ -62,6 +62,34 @@ https://prod.liveshare.vsengsaas.visualstudio.com/join?FA0AF0E04922F1D5F293B01D1
 
 
 
+créer le menu 
+créer le router 
+créer les composants Home / Connexion / CreateProfil 
+vu que ça marche !
+
+remplir les composants avec données => state manager 
+redux 
+npm i redux 
+
+import { createStore } from "redux" => déprécié
+
+import { configureStore } from "@reduxjs/toolkit";
+
+
+https://redux.js.org/introduction/why-rtk-is-redux-today
+
+npm un redux ; supprimer la librairie redux dans le dossier node_modules 
+npm i @reduxjs/toolkit
+
+
+------------------------
+
+google => redux dev tools
+https://github.com/zalmoxisus/redux-devtools-extension
+
+
+
+
 
 
 
