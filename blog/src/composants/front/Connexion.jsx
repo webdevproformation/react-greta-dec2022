@@ -1,10 +1,12 @@
 import { useRef , useState } from "react"
 import Joi from "joi";
+import {useDispatch} from "react-redux"
 
 const Connexion = () => {
     const loginRef = useRef();
     const passwordRef = useRef();
     const [message, setMessage] = useState([]);
+    const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -30,6 +32,8 @@ const Connexion = () => {
             setMessage(message);
             return 
         }
+
+        dispatch({type : "USER_LOGIN" , payload : identifiants})
         
         // avant d'envoyer à redux / base de données 
         // IL FAUT VERIFIER que les données saisies sont CONFORMES A VOS ATTENTES 
@@ -43,10 +47,12 @@ const Connexion = () => {
                 <input type="text" className="form-control" ref={loginRef} placeholder="votre login"/>
             </div>
             <div className="mb-3">
-                <input type="password" className="form-control" ref={passwordRef} placeholder="votre password"/>
+                <input type="password" className="form-control" ref={passwordRef} placeholder="votre password" 
+                onFocus={()=> setMessage([])}/>
             </div>
             <div className="mb-3">
-                <input type="submit" className="btn btn-dark" value="connexion"/>
+                <input type="submit" className="btn btn-dark" value="connexion" 
+                onFocus={()=> setMessage([])}/>
             </div>
         </form>
         {message.length > 0 && <div className="alert alert-danger">
@@ -54,6 +60,7 @@ const Connexion = () => {
                 return <div key={index}>{m}</div>
             })}
         </div>}
+        
     </> );
 }
  
