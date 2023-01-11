@@ -40,3 +40,11 @@ barre de menu qui contient 3 liens
     Accueil 
     créer profil 
     connexion 
+
+
+------------------------------
+
+toutes les notes sont disponibles sur le même github.com (que la période en distanciel)
+
+https://github.com/webdevproformation/react-greta-dec2022
+
