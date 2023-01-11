@@ -103,6 +103,15 @@ Cas pratique
 3 ajouter une nouvelle action dans la fonction reductrice reducerArticle 
 
 
+------------------------
+
+
+Dans le composant Connexion
+
+ajouter un formulaire contenant 2 champs
+login et password
+
+react et useRef() récupérer les valeurs saisies et afficher leur contenu dans la console du navigateur  
 
 
 

@@ -6,10 +6,10 @@ const articles = [
 export const reducerArticle = (state = articles , action) => {
     const cloneState = _.cloneDeep(state);
     switch( action.type ){
-        case "ADD" : 
+        case "ARTICLE_ADD" : 
             cloneState.push(action.payload);
             return cloneState ; 
-        case "SUPPRIMER" :
+        case "ARTICLE_SUPPRIMER" :
             return cloneState.filter(function(item){ 
                 return item.id !== action.payload
             })
