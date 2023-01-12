@@ -16,6 +16,8 @@ export const reducerUser = (state = user , action) => {
                 return {...cloneState, isLogged : true, erreur : ""}
             }
             return {...cloneState , erreur : "identifiants invalides"}
+        case "USER_LOGOUT" :
+            return {...cloneState, isLogged : false}
         default :
             return  state ;
     }
