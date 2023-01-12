@@ -21,6 +21,10 @@ const Nav = () => {
                     </li>
                     <li className="nav-item">
                         <NavLink className={({isActive}) =>  isActive ? "nav-link active" : "nav-link"
+                        } to="/cycle-vie" >Comprendre useEffect</NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink className={({isActive}) =>  isActive ? "nav-link active" : "nav-link"
                         } to="/connexion" >Connexion</NavLink>
                     </li>
                 </ul>

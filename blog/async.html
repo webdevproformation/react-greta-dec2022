@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // programmation synchrone
+        // le code s'exécute dans l'ordre dans lequel vous avez écrit votre code 
+        const a = 1 ;
+        const b = 2 ;
+        const c = a + b ;
+
+        // programmation asynchrone 
+        const d = 2 ;
+        setTimeout(function(){ const e = 3 } , 1000) // js il n'attend pas 
+        const f = d + e ; // erreur 
+
+
+        // react useEffect( function(){} , [] ) 
+        // si une valeur stockée dans le [] change alors exécute la fonction 
+        // side Effect => effet secondaire 
+        /*
+        
+        useEffect( function(){ // le message d'erreur si identifiants invalides
+            if(user.erreur){
+                setMessage([user.erreur]) => reexécution du composant 
+            }
+        } , [user.erreur]);
+        
+        */
+
+    </script>
+</body>
+</html>

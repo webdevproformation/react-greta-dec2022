@@ -7,6 +7,7 @@ import Home from "./composants/front/Home"
 import CreateProfil from "./composants/front/CreateProfil"
 import Connexion from "./composants/front/Connexion"
 import Dashboard from './composants/back/Dashboard'
+import CycleVie from './composants/front/CycleVie'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -15,6 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/" element={<App />}>
           <Route index element={<Home />}  />
           <Route path="creer-profil" element={<CreateProfil />}  />
+          <Route path="cycle-vie" element={<CycleVie />}  />
           <Route path="connexion" element={<Connexion />}  />
           <Route path="admin">
             <Route index element={<Dashboard /> } />
