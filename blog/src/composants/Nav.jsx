@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux"
 
 const Nav = () => {
+    const {isLogged} = useSelector((store) => store.reducerUser)
     return ( 
         <div className="bg-danger">
             <nav className="navbar navbar-expand container px-3 navbar-light">
@@ -23,10 +25,23 @@ const Nav = () => {
                         <NavLink className={({isActive}) =>  isActive ? "nav-link active" : "nav-link"
                         } to="/cycle-vie" >Comprendre useEffect</NavLink>
                     </li>
+                    {isLogged ? 
+                    <>
+                        <li className="nav-item">
+                            <NavLink className={({isActive}) =>  isActive ? "nav-link active" : "nav-link"
+                            } to="/admin" >Back office</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <a href="#" className="nav-link">deconnexion</a>
+                        </li>
+                    </>
+                    :
                     <li className="nav-item">
                         <NavLink className={({isActive}) =>  isActive ? "nav-link active" : "nav-link"
                         } to="/connexion" >Connexion</NavLink>
                     </li>
+                    }
+                    
                 </ul>
             </nav>
         </div>
