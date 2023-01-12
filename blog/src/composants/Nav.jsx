@@ -10,7 +10,7 @@ const Nav = () => {
 
     useEffect( function(){
         if(!isLogged){
-            navigate("/connexion")
+            navigate("/connexion");
         }
     }, [isLogged]);
 

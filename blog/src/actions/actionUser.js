@@ -5,8 +5,13 @@ export function getUser( login , password ){
     return (dispatch) => {
         return axios.get(`http://localhost:3004/users?login=${login}&password=${password}`)
             .then(rep => {
-                    console.log(rep.data[0])
-                    dispatch({type : "USER_GET" , payload : { ...rep.data[0] , isLogged : true }})
+                    if(rep.data.length > 0){
+                        // login et password existe 
+                        dispatch({type : "USER_GET" , payload : { ...rep.data[0] , isLogged : true, erreur : "" }})
+                    }else {
+                        // si erreur dans les identifiants 
+                        dispatch({type : "USER_GET" , payload : { isLogged : false , erreur : "identifiants invalides"}})
+                    }
                 }
             )
             .catch(ex => console.log(ex));

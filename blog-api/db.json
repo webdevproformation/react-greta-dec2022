@@ -3,8 +3,12 @@
         { 
             "nom" : "Alain",
             "login" : "tututu",
-            "password" : "123456",
-            "isLogged" : false 
+            "password" : "123456"
+        },
+        { 
+            "nom" : "Benoit",
+            "login" : "user2",
+            "password" : "123456"
         }
     ],
     "articles" : [
