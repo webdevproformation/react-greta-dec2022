@@ -9,13 +9,19 @@ const Connexion = () => {
     const [message, setMessage] = useState([]);
     const user = useSelector((store) => store.reducerUser)
     const dispatch = useDispatch();
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     useEffect(function(){
         if(user.isLogged){
             navigate("/admin");
         }
-    } , [user.isLogged])
+    } , [user.isLogged]);
+
+    useEffect( function(){
+        if(user.erreur){
+            setMessage([user.erreur])
+        }
+    } , [user.erreur]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -35,13 +41,8 @@ const Connexion = () => {
 
         if(error || user.erreur){
             let message = [];
-            if(error){
-                for(let m of error.details){
-                    message.push(m.message)
-                }
-            }
-            if(user.erreur){
-                message.push(user.erreur)
+            for(let m of error.details){
+                message.push(m.message)
             }
             setMessage(message);
             return 
