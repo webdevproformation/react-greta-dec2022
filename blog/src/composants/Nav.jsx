@@ -1,8 +1,24 @@
-import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux"
+import { NavLink , useNavigate } from "react-router-dom";
+import { useSelector , useDispatch } from "react-redux"
+import { useEffect } from "react";
+
 
 const Nav = () => {
     const {isLogged} = useSelector((store) => store.reducerUser)
+    const dispatch = useDispatch();
+    const navigate = useNavigate()
+
+    useEffect( function(){
+        if(!isLogged){
+            navigate("/connexion")
+        }
+    }, [isLogged]);
+
+    const deconnexion = (e) => {
+        e.preventDefault();
+        dispatch({type : "USER_LOGOUT"})
+    }
+
     return ( 
         <div className="bg-danger">
             <nav className="navbar navbar-expand container px-3 navbar-light">
@@ -32,7 +48,7 @@ const Nav = () => {
                             } to="/admin" >Back office</NavLink>
                         </li>
                         <li className="nav-item">
-                            <a href="#" className="nav-link">deconnexion</a>
+                            <a href="#" className="nav-link" onClick={deconnexion}>deconnexion</a>
                         </li>
                     </>
                     :
