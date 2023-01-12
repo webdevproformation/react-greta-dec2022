@@ -144,8 +144,47 @@ Requete SQL => demande à notre API
 https://prod.liveshare.vsengsaas.visualstudio.com/join?EAC868F735A94E0971FC6A0FF3F894DF0580
 
 
+dans le composant CreateProfil 
+
+créer un formulaire avec 4 champs 
+
+nom 
+login 
+password 
+verif password 
+
+lorsque vous soumettez le formulaire récupérer les valeurs saisies 
+
+vérifier que ces données sont conformes 
+nom contient 4 lettres maximum 200 lettres pas de caractères ><
+login contient 4 lettres maximum 200 lettres pas de caractères ><
+password contient 4 lettres maximum 200 lettres pas de caractères ><
+et vérifier que password === verif password 
+
+----
+
+=> appeler la base de données 
+verifier que le login n'est pas déjà utilisé 
+
+=> ajouter le profil dans la table users 
+POST 
 
 
+------------------------
+
+Firebase 
+
+=> https://formation.webdevpro.net/angular
+login : angular
+password : google 
+
+Chapitre 13 
+
+programmation reactive => https://rxjs.dev/
+
+https://www.youtube.com/watch?v=cyy5m4MdRuU
+
+malik.h@webdevpro.net
 
 
 
