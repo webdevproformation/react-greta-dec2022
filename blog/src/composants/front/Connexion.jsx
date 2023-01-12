@@ -2,6 +2,7 @@ import { useRef , useState , useEffect } from "react"
 import Joi from "joi";
 import {useDispatch, useSelector} from "react-redux"
 import {useNavigate} from "react-router-dom"
+import { getUser } from "../../actions/actionUser"
 
 const Connexion = () => {
     const loginRef = useRef();
@@ -47,8 +48,11 @@ const Connexion = () => {
             setMessage(message);
             return 
         }
+
+        dispatch(getUser(identifiants.login , identifiants.password));
+
         // sinon test les idenfiants saisis dans Redux 
-        dispatch({type : "USER_LOGIN" , payload : identifiants})
+        // dispatch({type : "USER_LOGIN" , payload : identifiants})
         // si login et password conforme => alors redirection vers Admin (1er useEffet)
         // sinon non correcte => afficher un bandeau identifiants incorrects
         // 2ème useEffect  

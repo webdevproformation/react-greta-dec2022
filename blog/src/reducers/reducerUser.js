@@ -1,15 +1,17 @@
 import _ from "lodash"
 
 const user = { // closure 
-    nom : "Alain",
+    /* nom : "Alain",
     login : "azerty",
     password : "123456",
-    isLogged : false 
+    isLogged : false  */
 }
 
 export const reducerUser = (state = user , action) => {
     const cloneState = _.cloneDeep(state);
     switch(action.type){
+        case "USER_GET" : 
+            return action.payload ;
         case "USER_LOGIN" :
             const {login , password} = cloneState
             if(login === action.payload.login && password === action.payload.password){
