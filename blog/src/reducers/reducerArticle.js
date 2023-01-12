@@ -6,6 +6,8 @@ const articles = [
 export const reducerArticle = (state = articles , action) => {
     const cloneState = _.cloneDeep(state);
     switch( action.type ){
+        case "ARTICLE_INIT" : 
+            return action.payload
         case "ARTICLE_ADD" : 
             cloneState.push(action.payload);
             return cloneState ; 
