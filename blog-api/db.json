@@ -1,20 +1,69 @@
 {
-    "users" : [
-        { 
-            "nom" : "Alain",
-            "login" : "tututu",
-            "password" : "123456"
-        },
-        { 
-            "nom" : "Benoit",
-            "login" : "user2",
-            "password" : "123456"
-        }
-    ],
-    "articles" : [
-        {"id" : 1 , "titre" : "premier article" , "contenu" : "lorem ipsum"},
-        {"id" : 2 , "titre" : "premier deux" , "contenu" : "lorem ipsum"},
-        {"id" : 3 , "titre" : "premier trois" , "contenu" : "lorem ipsum"},
-        {"id" : 4 , "titre" : "premier quatre" , "contenu" : "lorem ipsum"}
-    ]
+  "users": [
+    {
+      "id": 1,
+      "nom": "Alain",
+      "login": "tututu",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "nom": "Benoit",
+      "login": "user2",
+      "password": "123456"
+    },
+    {
+      "nom": "user3",
+      "login": "user3",
+      "password": "user3",
+      "password_confirm": "user3",
+      "id": 3
+    },
+    {
+      "nom": "user4",
+      "login": "user4",
+      "password": "user4",
+      "id": 4
+    },
+    {
+      "nom": "user5",
+      "login": "user5",
+      "password": "user5",
+      "id": 5
+    },
+    {
+      "nom": "user6",
+      "login": "user6",
+      "password": "user6",
+      "id": 6
+    },
+    {
+      "nom": "user7",
+      "login": "user7",
+      "password": "user7",
+      "id": 7
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "titre": "premier article",
+      "contenu": "lorem ipsum"
+    },
+    {
+      "id": 2,
+      "titre": "premier deux",
+      "contenu": "lorem ipsum"
+    },
+    {
+      "id": 3,
+      "titre": "premier trois",
+      "contenu": "lorem ipsum"
+    },
+    {
+      "id": 4,
+      "titre": "premier quatre",
+      "contenu": "lorem ipsum"
+    }
+  ]
 }

@@ -17,3 +17,8 @@ export function getUser( login , password ){
             .catch(ex => console.log(ex));
     }
 }
+
+
+export function addUser(profil){
+    return (dispatch)
+}
