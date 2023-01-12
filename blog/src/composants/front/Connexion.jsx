@@ -11,13 +11,13 @@ const Connexion = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    useEffect(function(){
+    useEffect(function(){ // redirection si le profil saisit correspond à celui dans la base de données 
         if(user.isLogged){
             navigate("/admin");
         }
     } , [user.isLogged]);
 
-    useEffect( function(){
+    useEffect( function(){ // le message d'erreur si identifiants invalides
         if(user.erreur){
             setMessage([user.erreur])
         }
@@ -25,21 +25,21 @@ const Connexion = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        // récupérer les données saisies
         const identifiants = {
             login : loginRef.current.value,
             password : passwordRef.current.value
         }
-
+        // IL FAUT VERIFIER que les données saisies sont CONFORMES A VOS ATTENTES 
+        // avant d'envoyer à redux / base de données 
         const schemaValidation = Joi.object({
             login :  Joi.string().min(4).max(200).regex(/^[^<>]*$/).required(),
             password : Joi.string().min(4).max(200).regex(/^[^<>]*$/).required(),
         })
-        const {error} = schemaValidation.validate(identifiants , {abortEarly : false})
-
-       /*  console.log(resultat)
-        return */ 
-
-        if(error || user.erreur){
+        const {error} = schemaValidation.validate(identifiants , {abortEarly : false});
+        // si il y a une erreur dans données 
+        // afficher le bandeau rouge et STOP
+        if(error){
             let message = [];
             for(let m of error.details){
                 message.push(m.message)
@@ -47,12 +47,11 @@ const Connexion = () => {
             setMessage(message);
             return 
         }
-
+        // sinon test les idenfiants saisis dans Redux 
         dispatch({type : "USER_LOGIN" , payload : identifiants})
-        
-        // avant d'envoyer à redux / base de données 
-        // IL FAUT VERIFIER que les données saisies sont CONFORMES A VOS ATTENTES 
-        
+        // si login et password conforme => alors redirection vers Admin (1er useEffet)
+        // sinon non correcte => afficher un bandeau identifiants incorrects
+        // 2ème useEffect  
     }
     
     return ( <>
