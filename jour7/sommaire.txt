@@ -121,7 +121,25 @@ https://prod.liveshare.vsengsaas.visualstudio.com/join?EAC868F735A94E0971FC6A0FF
 https://prod.liveshare.vsengsaas.visualstudio.com/join?EAC868F735A94E0971FC6A0FF3F894DF0580
 
 
+npm i -g json-server 
+npm i axios redux-thunk 
 
+
+
+json-server --watch db.json --port=3004
+
+Protocole : 
+
+GET GET http://localhost:3004/users
+	  GET http://localhost:3004/users/1
+      GET http://localhost:3004/users?login=...&password=....
+
+POST POST http://localhost:3004/users { nom : "tutu" , login : "..." , password : "..." , role : "" }
+
+PUT http://localhost:3004/users/1  { nom : "tata" , login : "..." , password : "..." , role : "" }
+DELETE  http://localhost:3004/users/1
+
+Requete SQL => demande à notre API 
 
 
 
