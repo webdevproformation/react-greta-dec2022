@@ -46,7 +46,7 @@ id / titre / contenu / actions
 nodejs / express / ???? 
 
 => image stocker dans un dossier du serveur 
-nodejs / express / multer
+nodejs / express / multer / noter l'adresse du fichier dans serveur (base de données)
  
 
 
