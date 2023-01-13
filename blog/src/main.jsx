@@ -10,6 +10,8 @@ import Dashboard from './composants/back/Dashboard'
 import CycleVie from './composants/front/CycleVie'
 import Erreur from './composants/front/Erreur'
 import NotFound from './composants/front/NotFound'
+import Articles from './composants/back/Articles'
+import Users from './composants/back/Users'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -22,8 +24,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path='creer-nouveau-profil' element={ <Navigate to="/creer-profil" />} />
           <Route path="erreur" element={<Erreur />}  />
           <Route path="connexion" element={<Connexion />}  />
-          <Route path="admin">
+          <Route path="admin/">
             <Route index element={<Dashboard /> } />
+            <Route path="articles" element={<Articles /> } />
+            <Route path="users" element={<Users /> } />
           </Route>
           {/** pour la route 404 mettre en dernier */}
           <Route path="/not-found" element={<NotFound />} />
