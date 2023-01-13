@@ -7,6 +7,7 @@ import { reducerUser } from "./reducers/reducerUser"
 import { Provider } from "react-redux"
 import thunk from "redux-thunk";
 import {getAllArticles} from "./actions/actionArticle"
+import { isLogged } from "./actions/actionUser";
 
 const store = configureStore({
    reducer : { reducerArticle , reducerUser },
@@ -16,6 +17,7 @@ const store = configureStore({
 // console.log(store.getState())
 //store.dispatch({ type : "ARTICLE_ADD" , payload : {id : 2 , titre : "Article 2" , contenu : "tutu"} })
 store.dispatch(getAllArticles());
+store.dispatch(isLogged())
 // console.log(store.getState())
 
 const App = () => {

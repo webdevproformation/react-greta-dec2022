@@ -17,6 +17,7 @@ const Nav = () => {
     const deconnexion = (e) => {
         e.preventDefault();
         dispatch({type : "USER_LOGOUT"})
+        localStorage.removeItem("auth");
     }
 
     return ( 
