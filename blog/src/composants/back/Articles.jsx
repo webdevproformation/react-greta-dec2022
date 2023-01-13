@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom"
 const Articles = () => {
     const articles = useSelector((store)=>  store.reducerArticle)
     const navigate = useNavigate()
-    const modifier = (id) => {
+    const modifier = ({id}) => {
         navigate("/admin/articles/update/"+id)
     }
 
@@ -37,7 +37,7 @@ const Articles = () => {
                                 <td>{article.titre}</td>
                                 <td>{article.contenu}</td>
                                 <td>
-            <button className="btn btn-warning btn-sm me-2" onClick={() => modifier(article.id)}>modifier</button>
+            <button className="btn btn-warning btn-sm me-2" onClick={() => modifier(article)}>modifier</button>
             <button className="btn btn-danger btn-sm">supprimer</button>
                                 </td>
                             </tr>
