@@ -15,3 +15,40 @@ return <>
              <p>utut</p>    &lt;p&gt;utut&lt;/p&gt; => injection XSS
 Cross Site Scripting 
 </>
+
+
+=> compte google gmail 
+=> gmail connexion 
+=> https://firebase.google.com/
+
+Ajouter dans le composant Dashboard 
+
+
+barre latérale
+=> utiliser le composant Bootstrap => "List group"
+
+Accueil                                => back/Dashboard.jsx  url admin
+Gestion des articles => lien (<Link >) => back/Articles.jsx   url admin/articles
+Gestion des Utilisateurs               => back/Users.jsx      url  admin/users
+
+tableau avec la liste de tous les articles en base de données (json-server)
+
+id / titre / contenu / actions 
+
+
+1 input type="file"
+2 form il faut ajouter l'attribut enctype="multipart/form-data"
+3 POST (ajax via axios / fetch)
+--------
+4 dans ton serveur json-server
+
+=> image stocker dans base de données 
+nodejs / express / ???? 
+
+=> image stocker dans un dossier du serveur 
+nodejs / express / multer
+ 
+
+
+
+

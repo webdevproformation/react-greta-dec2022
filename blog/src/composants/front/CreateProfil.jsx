@@ -57,11 +57,12 @@ const CreateProfil = () => {
 
     return ( <>
         <h1 className="mb-4">Créer un profil</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} enctype="multipart/form-data">
             <input type="text" placeholder="votre nom" className="form-control mb-3" ref={nomRef} />
             <input type="text" placeholder="votre login" className="form-control mb-3" ref={loginRef} />
             <input type="password" placeholder="votre password" className="form-control mb-3" ref={passwordRef} />
             <input type="password" placeholder="confirmer password" className="form-control mb-3" ref={password_confirmRef} />
+            <input type="file" className="form-control mb-3" />
             <input type="submit" className="btn btn-primary" />
         </form>
     </> );

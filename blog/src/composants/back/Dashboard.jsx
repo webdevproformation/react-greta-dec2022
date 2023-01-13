@@ -8,7 +8,7 @@ const Dashboard = () => {
             </div>
             <div className="col">
                 <h1 className="my-3">Accueil du dashboard</h1>
-                <table></table>
+                <img src="fond-ecran.jpg" alt="" className="img-fluid" />
             </div>
         </div>
     </> );
