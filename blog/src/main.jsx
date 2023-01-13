@@ -13,6 +13,7 @@ import NotFound from './composants/front/NotFound'
 import Articles from './composants/back/Articles'
 import Users from './composants/back/Users'
 import ArticlesUpdate from './composants/back/ArticlesUpdate'
+import Template from './composants/back/Template'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -24,8 +25,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="cycle-vie" element={<CycleVie />}  />
           <Route path='creer-nouveau-profil' element={ <Navigate to="/creer-profil" />} />
           <Route path="erreur" element={<Erreur />}  />
-          <Route path="connexion" element={<Connexion />}  />
-          <Route path="admin/">
+          <Route path="connexion" element={<Connexion />} />
+          <Route path="admin/" element={<Template />}>
             <Route index element={<Dashboard /> } />
             <Route path="articles/" >
               <Route index  element={<Articles /> } />

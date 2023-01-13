@@ -59,13 +59,13 @@
   "articles": [
     {
       "id": 1,
-      "titre": "premier article",
-      "contenu": "lorem ipsum"
+      "titre": "modification du titre",
+      "contenu": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
       "id": 2,
-      "titre": "premier deux",
-      "contenu": "bonjour les amis comment allez vous ce matin ??"
+      "titre": "modification",
+      "contenu": "bonjour les amis comment allez vous ce matin ??\navec\nsaut \nde ligne"
     },
     {
       "id": 3,
@@ -74,8 +74,8 @@
     },
     {
       "id": 4,
-      "titre": "premier quatre",
-      "contenu": "lorem ipsum"
+      "titre": "modification du 3ème article",
+      "contenu": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus vestibulum mattis ullamcorper velit. Morbi non arcu risus quis varius quam quisque id diam. Et tortor consequat id porta nibh venenatis cras sed felis. Urna et pharetra pharetra massa massa ultricies. Malesuada nunc vel risus commodo viverra maecenas accumsan. Est lorem ipsum dolor sit amet consectetur adipiscing. Convallis aenean et tortor at risus viverra adipiscing. Aliquet risus feugiat in ante. Eu mi bibendum neque egestas congue quisque egestas diam in. Quam pellentesque nec nam aliquam. Nisl condimentum id venenatis a condimentum vitae. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque."
     }
   ]
 }
