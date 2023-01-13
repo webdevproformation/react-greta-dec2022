@@ -12,6 +12,7 @@ import Erreur from './composants/front/Erreur'
 import NotFound from './composants/front/NotFound'
 import Articles from './composants/back/Articles'
 import Users from './composants/back/Users'
+import ArticlesUpdate from './composants/back/ArticlesUpdate'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -26,7 +27,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="connexion" element={<Connexion />}  />
           <Route path="admin/">
             <Route index element={<Dashboard /> } />
-            <Route path="articles" element={<Articles /> } />
+            <Route path="articles/" >
+              <Route index  element={<Articles /> } />
+              <Route path="update/:id"  element={<ArticlesUpdate /> } />
+            </Route>
             <Route path="users" element={<Users /> } />
           </Route>
           {/** pour la route 404 mettre en dernier */}
