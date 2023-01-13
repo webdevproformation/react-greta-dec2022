@@ -7,6 +7,7 @@ import { reducerUser } from "./reducers/reducerUser"
 import { Provider } from "react-redux"
 import thunk from "redux-thunk";
 import {getAllArticles} from "./actions/actionArticle"
+
 const store = configureStore({
    reducer : { reducerArticle , reducerUser },
    middleware : [thunk]

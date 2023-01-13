@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ 
+  <script>
+    
+    /*fetch("https://test-19872-default-rtdb.europe-west1.firebasedatabase.app/clients.json" , 
+    {
+      method : "POST",
+      body : JSON.stringify({nom : "Céline", age : 123456}),
+      headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+    }
+    )
+    .then(res => res.json())
+    .then(console.log)*/
+
+    
+    
+    //DELETE
+
+    /* fetch("https://test-19872-default-rtdb.europe-west1.firebasedatabase.app/clients/-Mgy0Y8Yx13IR9xAPVXq.json", { method : "DELETE" } )
+    .then(res => res.json())
+    .then(console.log)*/
+     
+    
+    // PUT
+    
+   /* fetch("https://test-19872-default-rtdb.europe-west1.firebasedatabase.app/clients/-MgyA9QuECsImYYZfCUU.json", 
+      {
+        method : "PUT" , 
+        body : JSON.stringify({nom : "DOE", prenom : "Céline" , age : 555}),
+        headers: {
+          
+          'Content-Type': 'application/json'
+        }
+      } 
+      )
+    .then(res => res.json())
+    .then(console.log)
+    .catch(ex => console.log(new Error(ex)))*/
+
+
+    // GET 
+    
+
+    fetch("https://test-19872-default-rtdb.europe-west1.firebasedatabase.app/clients.json")
+    .then(res => res.json())
+    .then(data => {
+      const result = [];
+      for(let key in data){
+        result.push({...data[key] , id : key })
+      }
+     console.log(result)
+    })
+
+   
+
+  </script>
+</body>
+</html>

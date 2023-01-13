@@ -2,13 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { BrowserRouter , Routes , Route } from "react-router-dom"
+import { BrowserRouter , Routes , Route , Navigate } from "react-router-dom"
 import Home from "./composants/front/Home"
 import CreateProfil from "./composants/front/CreateProfil"
 import Connexion from "./composants/front/Connexion"
 import Dashboard from './composants/back/Dashboard'
 import CycleVie from './composants/front/CycleVie'
 import Erreur from './composants/front/Erreur'
+import NotFound from './composants/front/NotFound'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -18,11 +19,15 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route index element={<Home />}  />
           <Route path="creer-profil" element={<CreateProfil />}  />
           <Route path="cycle-vie" element={<CycleVie />}  />
+          <Route path='creer-nouveau-profil' element={ <Navigate to="/creer-profil" />} />
           <Route path="erreur" element={<Erreur />}  />
           <Route path="connexion" element={<Connexion />}  />
           <Route path="admin">
             <Route index element={<Dashboard /> } />
           </Route>
+          {/** pour la route 404 mettre en dernier */}
+          <Route path="/not-found" element={<NotFound />} />
+          <Route path='*' element={ <Navigate to="/not-found" />} />
         </Route>
       </Routes>
     </BrowserRouter>

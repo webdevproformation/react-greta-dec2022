@@ -31,13 +31,27 @@ const CreateProfil = () => {
         
         // verifier si un user dispose du login saisi dans le formulaire 
 
-        const reponse = await axios.get(`http://localhost:3004/users?login=${loginRef.current.value}`)
+        axios.get(`http://localhost:3004/users?login=${loginRef.current.value}`)
+            .then( reponse => {
+                if(reponse.data.length > 0) return console.log("user existe déjà ce login");
+                axios.post(`http://localhost:3004/users` , 
+                _.omit(profil, ["password_confirm"]))
+                    .then( reponse => {
+                        if(!_.isEmpty(reponse.data)) return console.log("user crée en base de données " , reponse.data )
+                        e.target.reset();
+                    } )
+        })
 
-        if(reponse.data.length > 0) return console.log("user existe déja ce login")
+        /* const reponse = await axios.get(`http://localhost:3004/users?login=${loginRef.current.value}`)
 
-        const newUser = await axios.post(`http://localhost:3004/users` , _.omit(profil, ["password_confirm"]))
+        if(reponse.data.length > 0) return console.log("user existe déjà ce login")
 
-        if(!_.isEmpty(newUser.data)) return console.log("user crée en base de données " , newUser.data); 
+        const newUser = await axios.post(`http://localhost:3004/users` , 
+        _.omit(profil, ["password_confirm"])
+        )
+        // {....}
+
+        if(!_.isEmpty(newUser.data)) return console.log("user crée en base de données " , newUser.data);  */
 
     }
 

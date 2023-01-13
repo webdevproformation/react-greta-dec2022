@@ -42,6 +42,18 @@
       "login": "user7",
       "password": "user7",
       "id": 7
+    },
+    {
+      "nom": "aaaaaaaaa",
+      "login": "aaaaaaaaa",
+      "password": "aaaaaaaaa",
+      "id": 8
+    },
+    {
+      "nom": "user9",
+      "login": "user9",
+      "password": "user9",
+      "id": 9
     }
   ],
   "articles": [
